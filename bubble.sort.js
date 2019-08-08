@@ -28,3 +28,33 @@ function bubbleSort(input) {
 
     return array;
 }
+
+
+/**
+ * inverted version
+ * <----
+ */
+function bubbleSort2(input) {
+    const array = [...input];
+    let hasSwapped = false;
+
+    for (let i = 0; i < array.length; i += 1) {
+        hasSwapped = false;
+
+        for (let j = array.length - 1; j > i; j -= 1) {
+            if (array[j] < array[j - 1]) {
+                hasSwapped = true;
+                const temp = array[j];
+                array[j] = array[j - 1];
+                array[j - 1] = temp;
+            }
+        }
+
+        if (hasSwapped === false) {
+            return array;
+        }
+    }
+
+
+    return array;
+}
