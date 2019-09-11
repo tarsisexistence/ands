@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/maktarsis/ands#readme",
   "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "babel-jest": "^24.9.0",
     "jest": "^24.9.0",
     "yarn": "~1.17.3"
   }
