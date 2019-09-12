@@ -1,5 +1,4 @@
 import {sortBySelection} from './selection.sort';
-import {sortByCache} from "../cache/cache.sort";
 
 describe('[SORT] selection', () => {
     test('should sort array ', () => {
@@ -24,7 +23,7 @@ describe('[SORT] selection', () => {
     });
 
     test('should return sorted array with repeated values', () => {
-        expect(sortByCache([
+        expect(sortBySelection([
             5, 4, 3, 7, 9, 4
         ])).toEqual([
             3, 4, 4, 5, 7, 9
