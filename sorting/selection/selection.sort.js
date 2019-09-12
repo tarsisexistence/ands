@@ -1,3 +1,7 @@
+/**
+ * Selection sort algorithm
+ * Complexity: O(N^2)
+ */
 export const sortBySelection = array => {
     const n = array.length;
 

@@ -2,7 +2,7 @@
  * Bubble sort algorithm
  * Complexity: O(N^2)
  */
-function bubbleSort(input) {
+export const sortByBubble = input => {
     const array = [...input];
     let { length: lastStable } = array;
     let isSwapped;
@@ -27,14 +27,15 @@ function bubbleSort(input) {
     }
 
     return array;
-}
+};
 
 
 /**
- * inverted version
- * <----
+ * Inverted version of
+ * Bubble sort algorithm
+ * Complexity: O(N^2)
  */
-function bubbleSort2(input) {
+export const sortByInvertedBubble = input => {
     const array = [...input];
     let hasSwapped = false;
 
@@ -57,4 +58,4 @@ function bubbleSort2(input) {
 
 
     return array;
-}
+};

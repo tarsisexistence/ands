@@ -1,3 +1,7 @@
+/**
+ * Merge sort algorithm
+ * Complexity: O(N*log(N))
+ */
 export const sortByMerge = array => {
     if (array.length === 1) return array;
 

@@ -1,9 +1,8 @@
-import {sortBySelection} from './selection.sort';
-import {sortByCache} from "../cache/cache.sort";
+import {sortByCache} from './cache.sort';
 
-describe('[SORT] selection', () => {
+describe('[SORT] cache', () => {
     test('should sort array ', () => {
-        expect(sortBySelection([
+        expect(sortByCache([
             1, 3, 5, 4, 2
         ])).toEqual([
             1, 2, 3, 4, 5
@@ -12,11 +11,11 @@ describe('[SORT] selection', () => {
 
     test('should return already sorted array without changes', () => {
         const array = [1, 2, 3, 4, 5];
-        expect(sortBySelection(array)).toEqual(array);
+        expect(sortByCache(array)).toEqual(array);
     });
 
     test('should return sorted array when array is sorted in reverse order', () => {
-        expect(sortBySelection([
+        expect(sortByCache([
             5, 4, 3, 2, 1
         ])).toEqual([
             1, 2, 3, 4, 5
