@@ -1,6 +1,6 @@
 /**
  * Leetcode #938
- https://leetcode.com/problems/range-sum-of-bst/
+ * https://leetcode.com/problems/range-sum-of-bst/
  */
 /**
  * Definition for a binary tree node.
@@ -27,3 +27,25 @@ export const rangeSumBST = (node, L, R, sum = 0) => {
 
     return sum + rangeValue + left + right;
 };
+// const rangeSumBST = (node, L, R) => {
+//     const nodes = [node];
+//     let result = 0;
+//
+//     while (nodes.length > 0) {
+//         const nextNode = nodes.pop();
+//
+//         if (nextNode.val >= L && nextNode.val <= R) {
+//             result += nextNode.val;
+//         }
+//
+//         if (nextNode.left !== null) {
+//             nodes.push(nextNode.left);
+//         }
+//
+//         if (nextNode.right !== null) {
+//             nodes.push(nextNode.right);
+//         }
+//     }
+//
+//     return result;
+// };
