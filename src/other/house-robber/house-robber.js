@@ -1,5 +1,6 @@
 /**
  * Leetcode #198
+ * Difficulty: Easy*
  * https://leetcode.com/problems/house-robber/
  */
 /**

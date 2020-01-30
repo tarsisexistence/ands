@@ -1,5 +1,6 @@
 /**
  * Leetcode #771
+ * Difficulty: Easy
  * https://leetcode.com/problems/jewels-and-stones/
  */
 /**

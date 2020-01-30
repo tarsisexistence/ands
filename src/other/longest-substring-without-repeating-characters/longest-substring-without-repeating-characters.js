@@ -1,5 +1,6 @@
 /**
  * Leetcode #3
+ * Difficulty: Medium
  * https://leetcode.com/problems/longest-substring-without-repeating-characters/
  */
 /**

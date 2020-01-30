@@ -1,5 +1,6 @@
 /**
  * Leetcode #728
+ * Difficulty: Easy
  * https://leetcode.com/problems/self-dividing-numbers/
  */
 /**

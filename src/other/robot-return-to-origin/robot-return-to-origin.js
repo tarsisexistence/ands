@@ -1,5 +1,6 @@
 /**
  * Leetcode #657
+ * Difficulty: Easy
  * https://leetcode.com/problems/robot-return-to-origin/
  */
 /**

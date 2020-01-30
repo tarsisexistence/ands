@@ -1,5 +1,6 @@
 /**
  * Leetcode #804
+ * Difficulty: Easy
  * https://leetcode.com/problems/unique-morse-code-words/
  */
 

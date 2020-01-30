@@ -1,5 +1,6 @@
 /**
  * Leetcode #147
+ * Difficulty: Medium
  * https://leetcode.com/problems/insertion-sort-list/
  */
 /**

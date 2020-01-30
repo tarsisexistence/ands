@@ -1,5 +1,6 @@
 /**
  * Leetcode #938
+ * Difficulty: Easy
  * https://leetcode.com/problems/range-sum-of-bst/
  */
 /**

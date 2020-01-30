@@ -1,5 +1,6 @@
 /**
  * Leetcode #709
+ * Difficulty: Easy
  * https://leetcode.com/problems/to-lower-case/
  */
 /**

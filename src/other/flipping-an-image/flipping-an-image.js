@@ -1,5 +1,6 @@
 /**
  * Leetcode #832
+ * Difficulty: Easy
  * https://leetcode.com/problems/flipping-an-image/
  */
 /**

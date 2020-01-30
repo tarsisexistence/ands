@@ -1,5 +1,6 @@
 /**
  * Leetcode #561
+ * Difficulty: Easy
  * https://leetcode.com/problems/array-partition-i/
  */
 /**

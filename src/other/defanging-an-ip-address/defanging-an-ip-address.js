@@ -1,5 +1,6 @@
 /**
  * Leetcode #1108
+ * Difficulty: Easy
  * https://leetcode.com/problems/defanging-an-ip-address/
  */
 /**

@@ -1,5 +1,6 @@
 /**
  * Leetcode #617
+ * Difficulty: Easy
  * https://leetcode.com/problems/merge-two-binary-trees/
  */
 /**

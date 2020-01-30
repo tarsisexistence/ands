@@ -1,5 +1,6 @@
 /**
  * Leetcode #1313
+ * Difficulty: Easy
  * https://leetcode.com/problems/decompress-run-length-encoded-list/
  */
 /**

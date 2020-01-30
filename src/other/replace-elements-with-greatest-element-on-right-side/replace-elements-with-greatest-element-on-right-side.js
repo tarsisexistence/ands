@@ -1,5 +1,6 @@
 /**
  * Leetcode #1299
+ * Difficulty: Easy
  * https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/
  */
 /**

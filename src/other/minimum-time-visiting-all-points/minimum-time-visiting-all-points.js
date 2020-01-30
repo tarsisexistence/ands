@@ -1,5 +1,6 @@
 /**
  * Leetcode #1266
+ * Difficulty: Easy
  * https://leetcode.com/problems/minimum-time-visiting-all-points/
  */
 /**

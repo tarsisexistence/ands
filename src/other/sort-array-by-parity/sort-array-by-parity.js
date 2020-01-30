@@ -1,5 +1,6 @@
 /**
  * Leetcode #905
+ * Difficulty: Easy
  * https://leetcode.com/problems/sort-array-by-parity/
  */
 /**

@@ -1,5 +1,6 @@
 /**
  * Leetcode #1207
+ * Difficulty: Easy
  * https://leetcode.com/problems/unique-number-of-occurrences/
  */
 /**

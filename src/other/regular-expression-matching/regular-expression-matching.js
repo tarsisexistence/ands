@@ -1,5 +1,6 @@
 /**
  * Leetcode #10
+ * Difficulty: Hard
  * https://leetcode.com/problems/regular-expression-matching/
  */
 /**

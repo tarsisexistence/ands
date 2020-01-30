@@ -1,5 +1,6 @@
 /**
  * Leetcode #1295
+ * Difficulty: Easy
  * https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
  */
 /**
