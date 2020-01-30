@@ -1,7 +1,7 @@
 /**
  * Leetcode #852
  * Difficulty: Easy
- * https://leetcode.com/problems/regular-expression-matching/
+ * https://leetcode.com/problems/peak-index-in-a-mountain-array/
  */
 /**
  * @param {number[]} A
