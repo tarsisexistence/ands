@@ -16,35 +16,17 @@
  * @return {TreeNode}
  */
 const searchBST = (root, val) => {
-  if (root !== null) {
-    if (root.val === val) {
+  switch (true) {
+    case root === null:
+      return null;
+
+    case root.val > val:
+      return searchBST(root.left, val);
+
+    case root.val < val:
+      return searchBST(root.right, val);
+
+    default:
       return root;
-    }
-
-    const leftSubtree = searchBST(root.left, val);
-
-    if (leftSubtree) {
-      return leftSubtree;
-    }
-
-    const rightSubtree = searchBST(root.right, val);
-
-    if (rightSubtree) {
-      return rightSubtree;
-    }
   }
-
-  return null;
-  // const searchBST = (root, val) => {
-  //   if (root === null) {
-  //     return null
-  //   }
-  //
-  //   if (root.val === val) {
-  //     return root;
-  //   }
-  //
-  //   const nextSubtree = val > root.val ? root.right : root.left;
-  //   return searchBST(nextSubtree, val);
-  // };
 };
