@@ -35,4 +35,16 @@ const searchBST = (root, val) => {
   }
 
   return null;
+  // const searchBST = (root, val) => {
+  //   if (root === null) {
+  //     return null
+  //   }
+  //
+  //   if (root.val === val) {
+  //     return root;
+  //   }
+  //
+  //   const nextSubtree = val > root.val ? root.right : root.left;
+  //   return searchBST(nextSubtree, val);
+  // };
 };
