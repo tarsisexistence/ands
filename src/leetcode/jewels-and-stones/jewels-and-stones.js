@@ -9,12 +9,16 @@
  * @return {number}
  */
 export const numJewelsInStones = (stoneTypes, stonesInStock) => {
-    const stoneTypesMap = stoneTypes.split('').reduce((types, type) => {
-        types[type] = true;
-        return types;
-    }, {});
+  const stoneTypesMap = stoneTypes.split('').reduce((types, type) => {
+    types[type] = true;
+    return types;
+  }, {});
 
-    return stonesInStock
-        .split('')
-        .reduce((numJewels, stoneInStock) => stoneTypesMap[stoneInStock] ? numJewels + 1 : numJewels, 0);
+  return stonesInStock
+    .split('')
+    .reduce(
+      (numJewels, stoneInStock) =>
+        stoneTypesMap[stoneInStock] ? numJewels + 1 : numJewels,
+      0
+    );
 };

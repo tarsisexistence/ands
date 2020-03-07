@@ -14,7 +14,7 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-const insertionSortList = (head) => {
+const insertionSortList = head => {
   if (!head || !head.next) {
     return head;
   }
@@ -37,7 +37,6 @@ const insertionSortList = (head) => {
 
     arr[j + 1] = value;
   }
-
 
   const list = new ListNode(arr[0]);
   copy = list;

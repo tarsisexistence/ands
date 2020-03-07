@@ -14,7 +14,7 @@ export function quickSort(arr, left = 0, right = arr.length - 1) {
 }
 
 function partition(arr, left, right) {
-  const pivot = Math.floor(Math.random() * arr.length);
+  const pivot = Math.floor(Math.floor((right + left) / 2));
 
   while (right >= left) {
     while (arr[left] < arr[pivot]) {

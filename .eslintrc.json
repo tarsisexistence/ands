@@ -1,4 +1,5 @@
 {
+  "parser": "babel-eslint",
   "plugins": [
     "prettier",
     "import",
@@ -6,8 +7,6 @@
   ],
   "extends": [
     "eslint:recommended",
-    "prettier",
-    "plugin:prettier/recommended",
     "plugin:sonarjs/recommended",
     "plugin:import/errors",
     "plugin:import/warnings"
@@ -79,6 +78,7 @@
   "env": {
     "browser": true,
     "node": true,
-    "jest": true
+    "jest": true,
+    "es6": true
   }
 }

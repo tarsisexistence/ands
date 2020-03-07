@@ -11,10 +11,7 @@ export const decompressRLElist = nums => {
   const res = [];
 
   for (let i = 0; i < nums.length; i += 2) {
-    Array.from(
-        { length: nums[i] },
-        () => res.push(nums[i + 1])
-    );
+    Array.from({ length: nums[i] }, () => res.push(nums[i + 1]));
   }
 
   return res;
