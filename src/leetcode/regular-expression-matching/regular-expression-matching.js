@@ -13,12 +13,13 @@ export const isMatch = (string, pattern) => {
     return !string;
   }
 
-  const hasFirstCharMatch = Boolean(string) && (pattern[0] === '.' || pattern[0] === string[0]);
+  const hasFirstCharMatch =
+    Boolean(string) && (pattern[0] === '.' || pattern[0] === string[0]);
 
   if (pattern[1] === '*') {
     return (
-        isMatch(string, pattern.slice(2)) ||
-        (hasFirstCharMatch && isMatch(string.slice(1), pattern))
+      isMatch(string, pattern.slice(2)) ||
+      (hasFirstCharMatch && isMatch(string.slice(1), pattern))
     );
   }
 
