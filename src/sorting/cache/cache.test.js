@@ -1,32 +1,26 @@
-import {sortByCache} from './cache.sort';
+import { sortByCache } from './cache.sort';
 
 describe('[SORT] cache', () => {
-    test('should sort array ', () => {
-        expect(sortByCache([
-            1, 3, 5, 4, 2
-        ])).toEqual([
-            1, 2, 3, 4, 5
-        ]);
-    });
+  test('should sort array ', () => {
+    const unsorted = [1, 3, 5, 4, 2];
+    const sorted = [1, 2, 3, 4, 5];
+    expect(sortByCache(unsorted)).toEqual(sorted);
+  });
 
-    test('should return already sorted array without changes', () => {
-        const array = [1, 2, 3, 4, 5];
-        expect(sortByCache(array)).toEqual(array);
-    });
+  test('should return already sorted array without changes', () => {
+    const sorted = [1, 2, 3, 4, 5];
+    expect(sortByCache(sorted)).toEqual(sorted);
+  });
 
-    test('should return sorted array when array is sorted in reverse order', () => {
-        expect(sortByCache([
-            5, 4, 3, 2, 1
-        ])).toEqual([
-            1, 2, 3, 4, 5
-        ]);
-    });
+  test('should return sorted array when array is sorted in reverse order', () => {
+    const unsorted = [5, 4, 3, 2, 1];
+    const sorted = [1, 2, 3, 4, 5];
+    expect(sortByCache(unsorted)).toEqual(sorted);
+  });
 
-    test('should return sorted array with repeated values', () => {
-        expect(sortByCache([
-            5, 4, 3, 7, 9, 4
-        ])).toEqual([
-            3, 4, 4, 5, 7, 9
-        ])
-    });
+  test('should return sorted array with repeated values', () => {
+    const unsorted = [5, 4, 3, 7, 9, 4];
+    const sorted = [3, 4, 4, 5, 7, 9];
+    expect(sortByCache(unsorted)).toEqual(sorted);
+  });
 });
