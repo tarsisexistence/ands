@@ -1,27 +1,29 @@
 {
   "name": "ands",
   "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint src/**/*.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maktarsis/ands.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/maktarsis/ands/issues"
   },
   "homepage": "https://github.com/maktarsis/ands#readme",
   "devDependencies": {
-    "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
-    "babel-jest": "^24.9.0",
-    "jest": "^24.9.0",
-    "yarn": "~1.17.3"
+    "@babel/core": "7.6.0",
+    "@babel/preset-env": "7.6.0",
+    "babel-jest": "24.9.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-prettier": "3.1.1",
+    "eslint-plugin-sonarjs": "0.4.0",
+    "husky": "3.0.9",
+    "jest": "24.9.0",
+    "lint-staged": "9.4.2",
+    "prettier": "1.19.1",
+    "yarn": "1.17.3"
   }
 }

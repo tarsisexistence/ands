@@ -1,0 +1,84 @@
+{
+  "plugins": [
+    "prettier",
+    "import",
+    "sonarjs"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "rules": {
+    "semi": [
+      2,
+      "always"
+    ],
+    "quotes": 0,
+    "import/no-unresolved": 2,
+    "import/named": 2,
+    "import/namespace": 2,
+    "import/default": 2,
+    "import/export": 2,
+    "import/no-cycle": 2,
+    "import/imports-first": [
+      2,
+      "absolute-first"
+    ],
+    "import/newline-after-import": 2,
+    "import/prefer-default-export": 0,
+    "import/no-useless-path-segments": 2,
+    "import/no-default-export": 2,
+    "import/no-mutable-exports": 2,
+    "import/no-namespace": 2,
+    "import/no-extraneous-dependencies": 2,
+    "import/no-duplicates": 2,
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        "groups": [
+          [
+            "builtin",
+            "external"
+          ],
+          [
+            "parent",
+            "internal",
+            "sibling",
+            "index",
+            "unknown"
+          ]
+        ]
+      }
+    ],
+    "no-useless-catch": 0,
+    "sonarjs/no-useless-catch": 0,
+    "sonarjs/cognitive-complexity": 0,
+    "sonarjs/no-duplicated-branches": 0,
+    "spaced-comment": 0,
+    "no-empty-function": 2,
+    "no-useless-constructor": 0,
+    "lines-between-class-members": 2
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": [
+          "src/"
+        ],
+        "extensions": [
+          ".js"
+        ]
+      }
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  }
+}
