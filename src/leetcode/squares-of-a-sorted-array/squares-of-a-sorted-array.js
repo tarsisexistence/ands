@@ -26,4 +26,4 @@ export const sortedSquares = A => {
   }
 
   return result.reverse();
-}
+};

@@ -18,4 +18,4 @@ export const decompressRLElist = nums => {
   }
 
   return res;
-}
+};

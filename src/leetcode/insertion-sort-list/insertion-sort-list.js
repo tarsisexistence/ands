@@ -22,7 +22,7 @@ const insertionSortList = (head) => {
   const arr = [head.val];
   let copy = head;
 
-  while (!!copy.next) {
+  while (copy.next) {
     copy = copy.next;
     arr.push(copy.val);
   }

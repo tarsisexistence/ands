@@ -19,4 +19,4 @@ export const subtractProductAndSum = num => {
   }
 
   return mul - sum;
-}
+};

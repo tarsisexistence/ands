@@ -16,5 +16,5 @@ export const numJewelsInStones = (stoneTypes, stonesInStock) => {
 
     return stonesInStock
         .split('')
-        .reduce((numJewels, stoneInStock) => stoneTypesMap[stoneInStock] ? numJewels + 1 : numJewels, 0)
+        .reduce((numJewels, stoneInStock) => stoneTypesMap[stoneInStock] ? numJewels + 1 : numJewels, 0);
 };
