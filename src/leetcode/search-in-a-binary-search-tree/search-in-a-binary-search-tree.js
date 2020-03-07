@@ -15,7 +15,7 @@
  * @param {number} val
  * @return {TreeNode}
  */
-const searchBST = (root, val) => {
+export const searchBST = (root, val) => {
   switch (true) {
     case root === null:
       return null;

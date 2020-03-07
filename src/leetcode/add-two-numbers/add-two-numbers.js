@@ -1,3 +1,5 @@
+import { ListNode } from '../../utils/node';
+
 /**
  * Leetcode #2
  * Difficulty: Medium
@@ -21,12 +23,7 @@ export const addTwoNumbers = (l1, l2) => {
   let sum = 0;
   let carry = 0;
 
-
-  while (
-      l1 !== null ||
-      l2 !== null ||
-      sum > 0
-      ) {
+  while (l1 !== null || l2 !== null || sum > 0) {
     if (l1 !== null) {
       sum += l1.val;
       l1 = l1.next;

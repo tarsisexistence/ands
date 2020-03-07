@@ -8,7 +8,7 @@
  * @param {string} pattern
  * @return {boolean}
  */
-const isMatch = (string, pattern) => {
+export const isMatch = (string, pattern) => {
   if (!pattern) {
     return !string;
   }

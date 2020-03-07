@@ -1,3 +1,5 @@
+import { ListNode } from '../../utils/node';
+
 /**
  * Leetcode #147
  * Difficulty: Medium
@@ -14,7 +16,7 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-const insertionSortList = head => {
+export const insertionSortList = head => {
   if (!head || !head.next) {
     return head;
   }
