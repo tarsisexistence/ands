@@ -1,6 +1,6 @@
 import { quickSort } from './quick.sort';
 
-describe('[SORT] quick', () => {
+describe('[Sort] quick', () => {
   test('should sort array ', () => {
     const unsorted = [1, 3, 5, 4, 2];
     const sorted = [1, 2, 3, 4, 5];

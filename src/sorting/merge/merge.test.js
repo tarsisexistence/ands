@@ -1,6 +1,6 @@
 import { sortByMerge } from './merge.sort';
 
-describe('[SORT] merge', () => {
+describe('[Sort] merge', () => {
   test('should sort array ', () => {
     const unsorted = [1, 3, 5, 4, 2];
     const sorted = [1, 2, 3, 4, 5];

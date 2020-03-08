@@ -1,6 +1,6 @@
 import { sortByInsertion } from './insertion.sort';
 
-describe('[SORT] insertion', () => {
+describe('[Sort] insertion', () => {
   test('should sort array ', () => {
     const unsorted = [3, 5, 7, 2, 1];
     const sorted = [1, 2, 3, 5, 7];

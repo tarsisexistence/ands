@@ -3,13 +3,15 @@
   "plugins": [
     "prettier",
     "import",
-    "sonarjs"
+    "sonarjs",
+    "jest"
   ],
   "extends": [
     "eslint:recommended",
     "plugin:sonarjs/recommended",
     "plugin:import/errors",
-    "plugin:import/warnings"
+    "plugin:import/warnings",
+    "plugin:jest/recommended"
   ],
   "rules": {
     "semi": [
