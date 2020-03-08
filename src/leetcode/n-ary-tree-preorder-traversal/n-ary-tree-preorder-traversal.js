@@ -9,8 +9,29 @@
  * @param {Node} root
  * @return {number[]}
  */
-
 export const preorder = root => {
+  const result = [];
+  const stack = [];
+
+  if (root === null) {
+    return result;
+  }
+
+  stack.push(root);
+
+  while (stack.length > 0) {
+    const node = stack.pop();
+    result.push(node.val);
+
+    for (let i = node.children.length - 1; i >= 0; i -= 1) {
+      stack.push(node.children[i]);
+    }
+  }
+
+  return result;
+};
+
+export const preorderRecursively = root => {
   const result = [];
   traverse(root);
   return result;
