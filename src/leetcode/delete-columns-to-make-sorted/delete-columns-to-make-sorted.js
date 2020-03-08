@@ -27,3 +27,18 @@ export const minDeletionSize = A => {
 
   return deletedColumns.length;
 };
+
+export const minDeletionSizeWithInteger = A => {
+  let deletions = 0;
+
+  for (let i = 0; i < A[0].length; i += 1) {
+    for (let j = 1; j < A.length; j += 1) {
+      if (A[j - 1].charCodeAt(i) > A[j].charCodeAt(i)) {
+        deletions += 1;
+        break;
+      }
+    }
+  }
+
+  return deletions;
+};
