@@ -12,10 +12,7 @@ export const sortByBubble = input => {
 
     for (let i = 0; i < lastStable; i += 1) {
       if (array[i] > array[i + 1]) {
-        const temp = array[i];
-        array[i] = array[i + 1];
-        array[i + 1] = temp;
-
+        [array[i], array[i + 1]] = [array[i + 1], array[i]];
         hasSwapped = true;
       }
     }
@@ -44,10 +41,7 @@ export const sortByInvertedBubble = input => {
 
     for (let j = array.length - 1; j > i; j -= 1) {
       if (array[j] < array[j - 1]) {
-        const temp = array[j];
-        array[j] = array[j - 1];
-        array[j - 1] = temp;
-
+        [array[j], array[j - 1]] = [array[j - 1], array[j]];
         hasSwapped = true;
       }
     }

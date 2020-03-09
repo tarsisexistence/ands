@@ -1,3 +1,9 @@
+/**
+ * works only for integers
+ *
+ * JavaScript cache sort algorithm
+ * Complexity: O(N)
+ */
 export const sortByCache = input => {
   const cache = {};
 

@@ -12,9 +12,7 @@ export const sortBySelection = array => {
       }
     }
 
-    const temp = array[i];
-    array[i] = array[minId];
-    array[minId] = temp;
+    [array[i], array[minId]] = [array[minId], array[i]];
   }
 
   return array;
