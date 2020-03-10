@@ -1,6 +1,9 @@
 # dependencies
 /node_modules
 
+# reporters
+/report
+
 # IDEs and editors
 /.idea
 .project
