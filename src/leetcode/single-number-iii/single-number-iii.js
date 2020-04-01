@@ -7,7 +7,7 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-export const singleNumber = nums => {
+export const singleNumber3 = nums => {
   const map = {};
 
   for (let i = 0; i < nums.length; i += 1) {

@@ -1,11 +1,11 @@
-import { singleNumber } from './single-number-ii';
+import { singleNumber2 } from './single-number-ii';
 
-describe('[Leetcode] singleNumber', () => {
+describe('[Leetcode] singleNumber2', () => {
   test('example #1', () => {
-    expect(singleNumber([2, 2, 3, 2])).toBe(3);
+    expect(singleNumber2([2, 2, 3, 2])).toBe(3);
   });
 
   test('example #2', () => {
-    expect(singleNumber([0, 1, 0, 1, 0, 1, 99])).toBe(99);
+    expect(singleNumber2([0, 1, 0, 1, 0, 1, 99])).toBe(99);
   });
 });
