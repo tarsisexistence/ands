@@ -1,8 +1,7 @@
 /**
- * Leetcode #136
- * Difficulty: Easy
- * https://leetcode.com/problems/single-number/
- * LeetCoding challenge #1
+ * Leetcode #137
+ * Difficulty: Medium
+ * https://leetcode.com/problems/single-number-ii/
  */
 /**
  * @param {number[]} nums
