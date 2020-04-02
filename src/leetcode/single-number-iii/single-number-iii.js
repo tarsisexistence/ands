@@ -8,14 +8,17 @@
  * @return {number[]}
  */
 export const singleNumber3 = nums => {
-  const map = {};
+  const map = new Map();
 
   for (let i = 0; i < nums.length; i += 1) {
     const num = nums[i];
-    map[num] = map[num] === undefined;
+
+    if (map.has(num)) {
+      map.delete(num);
+    } else {
+      map.set(num, true);
+    }
   }
 
-  return Object.keys(map)
-    .filter(key => map[key] === true)
-    .map(Number);
+  return Array.from(map.keys());
 };
