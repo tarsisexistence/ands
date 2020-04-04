@@ -1,6 +1,6 @@
 import { isHappy } from './happy-number';
 
-describe('[Leetcode] singleNonDuplicate', () => {
+describe('[Leetcode] isHappy', () => {
   test('example #1', () => {
     expect(isHappy(19)).toBeTruthy();
   });
