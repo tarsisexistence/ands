@@ -2,7 +2,6 @@
  * Leetcode #136
  * Difficulty: Easy
  * https://leetcode.com/problems/single-number/
- * LeetCoding challenge #1
  */
 /**
  * @param {number[]} nums
