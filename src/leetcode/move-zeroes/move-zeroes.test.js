@@ -16,6 +16,13 @@ describe('[Leetcode] moveZeroes', () => {
   });
 
   test('example #3', () => {
+    const input = [2, 1];
+    const expected = [2, 1];
+    moveZeroes(input);
+    expect(input).toEqual(expected);
+  });
+
+  test('example #4', () => {
     const input = [
       -959151711,
       623836953,
