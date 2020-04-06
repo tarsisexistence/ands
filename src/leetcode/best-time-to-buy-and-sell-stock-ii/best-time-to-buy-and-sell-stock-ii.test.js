@@ -1,6 +1,6 @@
 import { maxProfit } from './best-time-to-buy-and-sell-stock-ii';
 
-describe('[Leetcode] maxProfit-ii', () => {
+describe('[Leetcode] maxProfit 2', () => {
   test('example #1', () => {
     expect(maxProfit([7, 1, 5, 3, 6, 4])).toBe(7);
   });
