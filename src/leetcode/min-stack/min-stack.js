@@ -1,7 +1,7 @@
 /**
- * Leetcode #412
+ * Leetcode #155
  * Difficulty: Easy
- * https://leetcode.com/problems/fizz-buzz/
+ * https://leetcode.com/problems/min-stack/
  */
 /**
  * initialize your data structure here.
