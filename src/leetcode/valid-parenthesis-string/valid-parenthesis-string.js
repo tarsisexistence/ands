@@ -1,6 +1,6 @@
 /**
  * Leetcode #678
- * Difficulty: Easy
+ * Difficulty: Medium
  * https://leetcode.com/problems/valid-parenthesis-string/
  */
 /**
@@ -35,20 +35,20 @@ export const checkValidString = s => {
   return balance.length <= 0;
 };
 
-// const checkValidString = s => {
-//   let lo = 0;
-//   let hi = 0;
+// export const checkValidString = s => {
+//   let low = 0;
+//   let high = 0;
 //
 //   for (const char of s) {
-//     lo += char === '(' ? 1 : -1;
-//     hi += char === ')' ? -1 : 1;
+//     low += char === '(' ? 1 : -1;
+//     high += char === ')' ? -1 : 1;
 //
-//     if (hi < 0) {
-//       break;
+//     if (high < 0) {
+//       return false;
 //     }
 //
-//     lo = Math.max(lo, 0);
+//     low = Math.max(low, 0);
 //   }
 //
-//   return lo === 0;
+//   return low === 0;
 // };
