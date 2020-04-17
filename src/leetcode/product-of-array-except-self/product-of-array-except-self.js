@@ -34,3 +34,23 @@ export const productExceptSelf = nums => {
 
   return products;
 };
+
+// const productExceptSelf = nums => {
+//   const products = [];
+//   let prev = 1;
+//
+//   for (let num of nums) {
+//     prev *= num;
+//     products.push(prev);
+//   }
+//
+//   prev = 1;
+//
+//   for (let i = nums.length - 1; i >= 0; i -= 1) {
+//     const num = nums[i];
+//     products[i] = i > 0 ? prev * products[i - 1] : prev;
+//     prev *= num;
+//   }
+//
+//   return products;
+// };
