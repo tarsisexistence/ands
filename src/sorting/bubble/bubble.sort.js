@@ -1,5 +1,5 @@
 /**
- * Bubble sort algorithm
+ * Algorithm: bubble sort
  * Complexity: O(N^2)
  */
 export const sortByBubble = input => {
@@ -28,8 +28,7 @@ export const sortByBubble = input => {
 };
 
 /**
- * Inverted version of
- * Bubble sort algorithm
+ * Algorithm: bubble sort (inverted version)
  * Complexity: O(N^2)
  */
 export const sortByInvertedBubble = input => {

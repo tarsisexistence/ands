@@ -1,5 +1,5 @@
 /**
- * Selection sort algorithm
+ * Algorithm: selection sort
  * Complexity: O(N^2)
  */
 export const sortBySelection = array => {

@@ -2,6 +2,7 @@
  * Leetcode #200
  * Difficulty: Medium
  * https://leetcode.com/problems/number-of-islands/
+ * Algorithm: DFS
  */
 /**
  * @param {string[][]} grid

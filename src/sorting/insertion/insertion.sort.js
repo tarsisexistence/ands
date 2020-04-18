@@ -1,5 +1,5 @@
 /**
- * Insertion sort algorithm
+ * Algorithm: insertion sort
  * Complexity: O(N^2)
  */
 export const sortByInsertion = array => {

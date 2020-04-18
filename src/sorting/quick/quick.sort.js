@@ -1,5 +1,5 @@
 /**
- * Quick sort algorithm
+ * Algorithm: quick sort
  * Complexity: O(N*log(N))
  */
 export function quickSort(arr, left = 0, right = arr.length - 1) {

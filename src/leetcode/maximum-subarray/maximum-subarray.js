@@ -2,7 +2,7 @@
  * Leetcode #53
  * Difficulty: Easy
  * https://leetcode.com/problems/maximum-subarray/
- * Kadane's algorithm
+ * Algorithm: Kadane
  */
 /**
  * @param {number[]} nums

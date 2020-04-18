@@ -1,5 +1,5 @@
 /**
- * Merge sort algorithm
+ * Algorithm: merge sort
  * Complexity: O(N*log(N))
  */
 export const sortByMerge = array => {
