@@ -1,6 +1,6 @@
 /**
  * Leetcode #33
- * Difficulty: Easy
+ * Difficulty: Medium
  * https://leetcode.com/problems/search-in-rotated-sorted-array/
  */
 /**
