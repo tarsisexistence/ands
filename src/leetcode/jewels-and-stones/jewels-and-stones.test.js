@@ -1,6 +1,6 @@
 import { numJewelsInStones } from './jewels-and-stones';
 
-describe('[Leetcode] jewels and stones', () => {
+describe('[Leetcode] numJewelsInStones', () => {
   test('should return base leetcode result', () => {
     expect(numJewelsInStones('aA', 'aAAbbbb')).toBe(3);
   });
