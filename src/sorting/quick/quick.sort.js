@@ -1,6 +1,7 @@
 /**
  * Algorithm: quick sort
  * Complexity: O(N*log(N))
+ * Links: https://github.com/v8/v8/blob/950d2051a5ff065a5bc1d31f0e5d1bba850d0b3c/src/array.js#L893-L1173
  */
 export function quickSort(arr, left = 0, right = arr.length - 1) {
   if (left < right) {
