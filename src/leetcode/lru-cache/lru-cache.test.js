@@ -1,4 +1,7 @@
 import { LRUCache } from './lru-cache';
+import { getQueueChecker } from '../../utils/queue';
+
+const queueChecker = getQueueChecker(LRUCache, 'LRUCache');
 
 describe('[Leetcode] LRUCache', () => {
   test('example #1', () => {
@@ -17,7 +20,7 @@ describe('[Leetcode] LRUCache', () => {
 
   test('example #2', () => {
     expect(
-      assert(
+      queueChecker(
         ['LRUCache', 'get', 'put', 'get', 'put', 'put', 'get', 'get'],
         [[2], [2], [2, 6], [1], [1, 5], [1, 2], [1], [2]]
       )
@@ -26,7 +29,7 @@ describe('[Leetcode] LRUCache', () => {
 
   test('example #3', () => {
     expect(
-      assert(
+      queueChecker(
         ['LRUCache', 'put', 'put', 'put', 'put', 'get', 'get'],
         [[2], [2, 1], [1, 1], [2, 3], [4, 1], [1], [2]]
       )
@@ -35,7 +38,7 @@ describe('[Leetcode] LRUCache', () => {
 
   test('example #4', () => {
     expect(
-      assert(
+      queueChecker(
         [
           'LRUCache',
           'put',
@@ -375,27 +378,3 @@ describe('[Leetcode] LRUCache', () => {
     ]);
   });
 });
-
-function assert(commands, inputs) {
-  if (commands.length !== inputs.length) {
-    throw new Error('lengths of commands and inputs are different');
-  }
-
-  const results = [];
-  let cacheInstance = null;
-
-  for (let i = 0; i < commands.length; i += 1) {
-    const cmd = commands[i];
-    const input = inputs[i];
-
-    if (cmd === 'LRUCache') {
-      cacheInstance = new LRUCache(...input);
-      results.push(null);
-    } else {
-      const value = cacheInstance[cmd](...input);
-      results.push(value === undefined ? null : value);
-    }
-  }
-
-  return results;
-}
