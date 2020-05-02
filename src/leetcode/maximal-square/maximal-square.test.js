@@ -9,7 +9,7 @@ describe('[Leetcode] maximalSquare', () => {
         ['1', '1', '1', '1', '1'],
         ['1', '0', '0', '1', '0']
       ])
-    ).toEqual(4);
+    ).toBe(4);
   });
 
   test('example #2', () => {
@@ -21,10 +21,10 @@ describe('[Leetcode] maximalSquare', () => {
         ['1', '1', '1', '1', '1', '0', '0', '0'],
         ['0', '1', '1', '1', '1', '0', '0', '0']
       ])
-    ).toEqual(16);
+    ).toBe(16);
   });
 
   test('example #3', () => {
-    expect(maximalSquare([['1']])).toEqual(1);
+    expect(maximalSquare([['1']])).toBe(1);
   });
 });

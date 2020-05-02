@@ -10016,6 +10016,6 @@ describe('[Leetcode] subarraySum', () => {
         ],
         -93
       )
-    ).toEqual(1023);
+    ).toBe(1023);
   });
 });
