@@ -9,16 +9,16 @@
  * @return {number}
  */
 export const numJewelsInStones = (stoneTypes, stonesInStock) => {
-  const stoneTypesMap = stoneTypes.split('').reduce((types, type) => {
-    types[type] = true;
-    return types;
-  }, {});
+  let jewels = 0;
+  const stoneTypesMap = Object.fromEntries(
+    stoneTypes.split('').map(jewel => [jewel, true])
+  );
 
-  return stonesInStock
-    .split('')
-    .reduce(
-      (numJewels, stoneInStock) =>
-        stoneTypesMap[stoneInStock] ? numJewels + 1 : numJewels,
-      0
-    );
+  for (let i = 0; i < stonesInStock.length; i += 1) {
+    if (stoneTypesMap[stonesInStock[i]]) {
+      jewels += 1;
+    }
+  }
+
+  return jewels;
 };

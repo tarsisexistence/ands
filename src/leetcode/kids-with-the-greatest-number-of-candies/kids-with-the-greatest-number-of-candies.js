@@ -10,11 +10,5 @@
  */
 export const kidsWithCandies = (candies, extraCandies) => {
   const greatest = Math.max(...candies);
-  let candiesWithExtra = [];
-
-  for (const kidCandies of candies) {
-    candiesWithExtra.push(kidCandies + extraCandies >= greatest);
-  }
-
-  return candiesWithExtra;
+  return candies.map(kidCandies => kidCandies + extraCandies >= greatest);
 };
