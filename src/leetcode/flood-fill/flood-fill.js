@@ -1,7 +1,7 @@
 /**
- * Leetcode #997
+ * Leetcode #733
  * Difficulty: Easy
- * https://leetcode.com/problems/find-the-town-judge/
+ * https://leetcode.com/problems/flood-fill/
  */
 /**
  * @param {number[][]} image
