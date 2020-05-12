@@ -3,7 +3,6 @@
  * Difficulty: Easy
  * https://leetcode.com/problems/maximum-depth-of-n-ary-tree/
  */
-
 /**
  * @param {Node} root
  * @return {number}
