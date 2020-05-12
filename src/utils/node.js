@@ -3,12 +3,13 @@ export function ListNode(val) {
   this.next = null;
 }
 
-export function TreeNode(val) {
+export function TreeNode(val, left = null, right = null) {
   this.val = val;
-  this.left = this.right = null;
+  this.left = left;
+  this.right = right;
 }
 
-export function Node(val, children) {
+export function Node(val, children = []) {
   this.val = val;
   this.children = children;
 }
