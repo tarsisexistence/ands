@@ -12,8 +12,9 @@ export const removeKdigits = (num, k) => {
   const stack = [];
   let removed = 0;
 
-  for (const n of num) {
-    while (stack.length && Number(n) < stack[stack.length - 1] && removed < k) {
+  for (let i = 0; i < num.length; i += 1) {
+    const n = num[i];
+    while (stack.length > 0 && n < stack[stack.length - 1] && removed < k) {
       stack.pop();
       removed += 1;
     }
@@ -28,5 +29,5 @@ export const removeKdigits = (num, k) => {
     removed += 1;
   }
 
-  return stack.length ? stack.join('') : '0';
+  return stack.length > 0 ? stack.join('') : '0';
 };
