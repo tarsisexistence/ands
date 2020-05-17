@@ -52,3 +52,18 @@ export const sortByInvertedBubble = input => {
 
   return array;
 };
+
+// without optimisation
+// export function bubble(inputArr) {
+//   for (let i = 0; i < inputArr.length; i += 1) {
+//     for (let j = 0; j < inputArr.length; j += 1) {
+//       if (inputArr[j] > inputArr[j + 1]) {
+//         let tmp = inputArr[j];
+//         inputArr[j] = inputArr[j + 1];
+//         inputArr[j + 1] = tmp;
+//       }
+//     }
+//   }
+//
+//   return inputArr;
+// }
