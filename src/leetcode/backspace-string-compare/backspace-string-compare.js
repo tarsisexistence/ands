@@ -1,7 +1,7 @@
 /**
- * Leetcode #49
+ * Leetcode #844
  * Difficulty: Easy
- * https://leetcode.com/problems/group-anagrams/
+ * https://leetcode.com/problems/backspace-string-compare/
  */
 /**
  * @param {string} S
