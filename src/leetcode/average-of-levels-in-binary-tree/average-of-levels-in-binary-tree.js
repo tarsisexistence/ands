@@ -1,6 +1,6 @@
 /**
  * Leetcode #637
- * Difficulty: Medium
+ * Difficulty: Easy
  * https://leetcode.com/problems/average-of-levels-in-binary-tree/
  */
 /**
