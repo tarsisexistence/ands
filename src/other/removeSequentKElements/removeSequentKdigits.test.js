@@ -1,6 +1,6 @@
 import { removeSequentKdigits } from './removeSequentKdigits';
 
-describe('[Leetcode] removeSequentKdigits', () => {
+describe('[Other] removeSequentKdigits', () => {
   test('example #1', () => {
     expect(removeSequentKdigits('1432219', 3)).toBe('1219');
   });
