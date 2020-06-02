@@ -36,20 +36,20 @@ function partition(arr, left, right) {
   return left;
 }
 
-export const basicQuickSort = array => {
+export const basicQuickSort = (array) => {
   if (array.length < 2) {
     return array;
   }
 
   const pivot = array[Math.ceil(array.length / 2)];
-  const left = array.filter(v => v < pivot);
-  const right = array.filter(v => v > pivot);
-  const equals = array.filter(v => v === pivot);
+  const left = array.filter((v) => v < pivot);
+  const right = array.filter((v) => v > pivot);
+  const equals = array.filter((v) => v === pivot);
 
   return [...quickSort(left), ...equals, ...quickSort(right)];
 };
 
-export const straightforwardQuickSort = arr => {
+export const straightforwardQuickSort = (arr) => {
   if (arr.length < 2) {
     return arr;
   }
@@ -76,3 +76,38 @@ export const straightforwardQuickSort = arr => {
     ...straightforwardQuickSort(right)
   ];
 };
+
+// without random
+// export function qsort(input) {
+//   return dnq(input);
+//
+//   function dnq(array) {
+//     if (array.length < 2) {
+//       return array;
+//     }
+//
+//     if (array.length === 2) {
+//       if (array[0] > array[1]) {
+//         [array[0], array[1]] = [array[1], array[0]];
+//       }
+//
+//       return array;
+//     }
+//
+//     const supporting = array[0];
+//     const left = [];
+//     const right = [];
+//
+//     for (let i = 1; i < array.length; i += 1) {
+//       const num = array[i];
+//
+//       if (num < supporting) {
+//         left.push(num);
+//       } else {
+//         right.push(num);
+//       }
+//     }
+//
+//     return [...dnq(left), supporting, ...dnq(right)];
+//   }
+// }
