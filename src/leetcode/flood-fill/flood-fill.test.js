@@ -20,7 +20,7 @@ describe('[Leetcode] floodFill', () => {
     ]);
   });
 
-  test('example #1', () => {
+  test('example #2', () => {
     expect(
       floodFill(
         [
