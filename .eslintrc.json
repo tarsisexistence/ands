@@ -1,23 +1,17 @@
 {
   "parser": "babel-eslint",
-  "plugins": [
-    "prettier",
-    "import",
-    "sonarjs",
-    "jest"
-  ],
+  "plugins": ["prettier", "import", "sonarjs", "jest"],
   "extends": [
     "eslint:recommended",
+    "prettier",
+    "plugin:prettier/recommended",
     "plugin:sonarjs/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:jest/recommended"
   ],
   "rules": {
-    "semi": [
-      2,
-      "always"
-    ],
+    "semi": [2, "always"],
     "quotes": 0,
     "import/no-unresolved": 2,
     "import/named": 2,
@@ -25,10 +19,7 @@
     "import/default": 2,
     "import/export": 2,
     "import/no-cycle": 2,
-    "import/imports-first": [
-      2,
-      "absolute-first"
-    ],
+    "import/imports-first": [2, "absolute-first"],
     "import/newline-after-import": 2,
     "import/prefer-default-export": 0,
     "import/no-useless-path-segments": 2,
@@ -42,17 +33,8 @@
       {
         "newlines-between": "always",
         "groups": [
-          [
-            "builtin",
-            "external"
-          ],
-          [
-            "parent",
-            "internal",
-            "sibling",
-            "index",
-            "unknown"
-          ]
+          ["builtin", "external"],
+          ["parent", "internal", "sibling", "index", "unknown"]
         ]
       }
     ],
@@ -68,12 +50,8 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "paths": [
-          "src/"
-        ],
-        "extensions": [
-          ".js"
-        ]
+        "paths": ["src/"],
+        "extensions": [".js"]
       }
     }
   },
