@@ -54,3 +54,15 @@ class RandomizedSet {
     return this.indices.get(randomId);
   };
 }
+
+// RandomizedSet.prototype.insert = function(val) {
+//   return this.set.size != this.set.add(val).size;
+// };
+//
+// RandomizedSet.prototype.remove = function(val) {
+//   return this.set.delete(val);
+// };
+//
+// RandomizedSet.prototype.getRandom = function() {
+//   return [...this.set][Math.floor(Math.random() * this.set.size)];
+// };
