@@ -12,23 +12,17 @@ export const finalPrices = prices => {
 
   for (let i = 0; i < prices.length; i += 1) {
     const current = prices[i];
-    const next = prices[i + 1];
+    let discount = 0;
 
-    if (current >= next) {
-      final.push(current - next);
-    } else {
-      let discount = null;
-
-      for (let j = i + 1; j < prices.length; j += 1) {
-        if (prices[j] <= current) {
-          discount = prices[j];
-          break;
-        }
+    for (let j = i + 1; j < prices.length; j += 1) {
+      if (prices[j] <= current) {
+        discount = prices[j];
+        break;
       }
-
-      const next = discount === null ? current : current - discount;
-      final.push(next);
     }
+
+    const next = current - discount;
+    final.push(next);
   }
 
   return final;
