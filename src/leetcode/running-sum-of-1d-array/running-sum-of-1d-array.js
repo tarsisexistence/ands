@@ -1,5 +1,5 @@
 /**
- * Leetcode #5453
+ * Leetcode #1483
  * Difficulty: Easy
  * https://leetcode.com/problems/running-sum-of-1d-array/
  */
