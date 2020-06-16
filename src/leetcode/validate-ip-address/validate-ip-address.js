@@ -23,10 +23,12 @@ function isIPv4(ip) {
   return (
     groups.length === 4 &&
     groups.every(group => {
-      if (group.length === 0 || group.length > 4) {
+      const isInvalidLength = group.length === 0 || group.length > 4;
+      const isInvalidLeadingZero = group[0] === '0' && group.length !== 1;
+      const isInvalidNumber = group < 0 || group > 255;
+
+      if (isInvalidLength || isInvalidLeadingZero || isInvalidNumber) {
         return false;
-      } else if (group[0] === '0') {
-        return group.length === 1;
       }
 
       for (let i = 0; i < group.length; i += 1) {
@@ -38,7 +40,7 @@ function isIPv4(ip) {
         }
       }
 
-      return group > 0 && group <= 255;
+      return true;
     })
   );
 }
@@ -48,11 +50,10 @@ function isIPv6(ip) {
   return (
     groups.length === 8 &&
     groups.every(group => {
-      if (
-        group.length === 0 ||
-        group.length > 4 ||
-        Number.isNaN(Number(`0x${group}`))
-      ) {
+      const isInvalidLength = group.length === 0 || group.length > 4;
+      const isNotANumber = Number.isNaN(Number(`0x${group}`));
+
+      if (isInvalidLength || isNotANumber) {
         return false;
       }
 
