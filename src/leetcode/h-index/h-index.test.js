@@ -40,4 +40,20 @@ describe('[Leetcode] hIndex', () => {
   test('example #10', () => {
     expect(hIndex([2, 2, 2, 2, 2])).toBe(2);
   });
+
+  test('example #11', () => {
+    expect(hIndex([2, 3, 2])).toBe(2);
+  });
+
+  test('example #12', () => {
+    expect(hIndex([3, 3, 3, 4])).toBe(3);
+  });
+
+  test('example #13', () => {
+    expect(hIndex([3, 0, 6, 1, 5])).toBe(3);
+  });
+
+  test('example #14', () => {
+    expect(hIndex([7, 7, 9, 5, 5, 10])).toBe(5);
+  });
 });
