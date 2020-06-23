@@ -4,13 +4,6 @@
  * https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
  */
 /**
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
- */
-/**
  * @param {ListNode} list
  * @return {number}
  */
