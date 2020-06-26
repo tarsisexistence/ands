@@ -12,4 +12,8 @@ describe('[Leetcode] findDuplicate', () => {
   test('example #3', () => {
     expect(findDuplicate([2, 5, 9, 6, 9, 3, 8, 9, 7, 1])).toBe(9);
   });
+
+  // test('example #4', () => {
+  //   expect(findDuplicate([5, 3, 1, 2, 1, 4])).toBe(3);
+  // });
 });
