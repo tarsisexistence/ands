@@ -1,7 +1,7 @@
 import { TreeNode } from '../../utils/node';
 
 /**
- * @param {(string|number|null)[]} values
+ * @param {(string|number)[]} values
  * @return {TreeNode}
  */
 export const createTree = values => {
