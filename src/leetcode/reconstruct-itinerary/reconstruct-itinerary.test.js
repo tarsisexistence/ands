@@ -63,19 +63,3 @@ describe('[Leetcode] findItinerary', () => {
     ]);
   });
 });
-
-// {
-//   EZE: [ 'AXA' ],
-//     TIA: [ 'ANU', 'JFK', 'ANU' ],
-//   ANU: [ 'JFK', 'TIA', 'EZE' ],
-//   JFK: [ 'TIA', 'ANU' ],
-//   AXA: [ 'TIA' ]
-// }
-
-// {
-//   EZE: [ 'AXA' ],
-//     TIA: [ 'ANU', 'ANU', 'JFK' ],
-//   ANU: [ 'EZE', 'JFK', 'TIA' ],
-//   JFK: [ 'ANU', 'TIA' ],
-//   AXA: [ 'TIA' ]
-// }
