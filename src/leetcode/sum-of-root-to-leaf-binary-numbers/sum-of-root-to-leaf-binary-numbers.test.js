@@ -6,7 +6,7 @@ describe('[Leetcode] sumRootToLeaf', () => {
     expect(sumRootToLeaf(createTree([1, 0, 1, 0, 1, 0, 1]))).toBe(22);
   });
 
-  test('example #3', () => {
+  test('example #2', () => {
     expect(sumRootToLeaf(createTree([1, 1]))).toBe(3);
   });
 });
