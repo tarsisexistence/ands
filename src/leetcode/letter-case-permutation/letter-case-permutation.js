@@ -34,6 +34,39 @@ export const letterCasePermutation = S => {
 };
 
 // export const letterCasePermutation = S => {
+//   const words = new Set();
+//   permut('');
+//   return [...words.keys()];
+//
+//   function permut(s) {
+//     const id = s.length;
+//
+//     if (id === S.length) {
+//       return;
+//     }
+//
+//     const char = S[id];
+//     const secondPart = S.substring(id + 1);
+//     const charCode = char.charCodeAt(0);
+//     const isUpper = charCode >= 65 && charCode <= 90;
+//     const isLower = charCode >= 97 && charCode <= 122;
+//
+//     if (isUpper || isLower) {
+//       const lower = s + char.toLowerCase();
+//       const upper = s + char.toUpperCase();
+//       words.add(lower + secondPart);
+//       words.add(upper + secondPart);
+//       permut(lower);
+//       permut(upper);
+//     } else {
+//       const num = s + char;
+//       words.add(num + secondPart);
+//       permut(num);
+//     }
+//   }
+// };
+
+// export const letterCasePermutation = S => {
 //   const words = [S.split('')];
 //
 //   for (let i = 0; i < S.length; i += 1) {
