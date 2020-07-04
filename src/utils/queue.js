@@ -1,7 +1,4 @@
-export const getQueueChecker = (Constructor, constructorCmd) => (
-  commands,
-  inputs
-) => {
+export const getQueueChecker = (Constructor, constructorCmd) => (commands, inputs) => {
   if (commands.length !== inputs.length) {
     throw new Error('lengths of commands and inputs are different');
   }
