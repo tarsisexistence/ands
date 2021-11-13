@@ -12,3 +12,19 @@ impl Solution {
         res
     }
 }
+
+// other solutions
+
+// impl Solution {
+//     pub fn get_concatenation(nums: Vec<i32>) -> Vec<i32> {
+//         return nums[..].repeat(2);
+//     }
+// }
+
+// impl Solution {
+//     pub fn get_concatenation(mut nums: Vec<i32>) -> Vec<i32> {
+//         nums.extend(nums.clone());
+//         nums
+//     }
+// }
+
