@@ -9,7 +9,7 @@ describe('[Other] Iterable', () => {
     };
     expect([...object]).toEqual(['first', 'second', 'third']);
   });
-  a;
+
   test('should iterate object over iterableGenerator', () => {
     const object = {
       items: ['first', 'second', 'third'],
