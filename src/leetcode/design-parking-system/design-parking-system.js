@@ -4,9 +4,7 @@
  * @param {number} small
  */
 const ParkingSystem = function (big, medium, small) {
-  this.big = big;
-  this.medium = medium;
-  this.small = small;
+  this.space = [big, medium, small];
 };
 
 /**
@@ -14,31 +12,9 @@ const ParkingSystem = function (big, medium, small) {
  * @return {boolean}
  */
 ParkingSystem.prototype.addCar = function (carType) {
-  switch (carType) {
-    case 1:
-      if (this.big < 1) {
-        return false;
-      }
-      this.big -= 1;
-      break;
+  this.space[carType - 1] -= 1;
 
-    case 2:
-      if (this.medium < 1) {
-        return false;
-      }
-      this.medium -= 1;
-      break;
-    case 3:
-      if (this.small < 1) {
-        return false;
-      }
-      this.small -= 1;
-      break;
-    default:
-      return false;
-  }
-
-  return true;
+  return this.space[carType - 1] >= 0;
 };
 
 /**
@@ -46,3 +22,37 @@ ParkingSystem.prototype.addCar = function (carType) {
  * var obj = new ParkingSystem(big, medium, small)
  * var param_1 = obj.addCar(carType)
  */
+
+// const ParkingSystem = function (big, medium, small) {
+//   this.big = big;
+//   this.medium = medium;
+//   this.small = small;
+// };
+//
+// ParkingSystem.prototype.addCar = function (carType) {
+//   switch (carType) {
+//     case 1:
+//       if (this.big < 1) {
+//         return false;
+//       }
+//       this.big -= 1;
+//       break;
+//
+//     case 2:
+//       if (this.medium < 1) {
+//         return false;
+//       }
+//       this.medium -= 1;
+//       break;
+//     case 3:
+//       if (this.small < 1) {
+//         return false;
+//       }
+//       this.small -= 1;
+//       break;
+//     default:
+//       return false;
+//   }
+//
+//   return true;
+// };
