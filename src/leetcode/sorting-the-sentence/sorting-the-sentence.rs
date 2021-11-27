@@ -12,3 +12,16 @@ impl Solution {
         new_words.join(" ")
     }
 }
+
+// String::from(words.iter().fold(String::default(), |x, y| x + y).chars().map(|x| if x.is_digit(10) { ' ' } else { x }).collect::<String>().trim_end())
+
+// impl Solution {
+//     pub fn sort_sentence(s: String) -> String {
+//         let mut s = s.split(" ").collect::<Vec<_>>();
+//         s.sort_unstable_by_key(|a| a.as_bytes()[a.len() - 1] - b'0');
+//         s.iter()
+//             .map(|w| unsafe { String::from_utf8_unchecked(w[..w.len() - 1].into()) })
+//             .collect::<Vec<_>>()
+//             .join(" ")
+//     }
+// }
