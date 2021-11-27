@@ -8,7 +8,7 @@
  * @return {number[]}
  */
 export const countBits = n => {
-  const ans = new Uint8Array(n + 1);
+  const ans = new Array(n + 1);
 
   for (let i = 0; i < n + 1; i += 1) {
     const bin = i.toString(2);
