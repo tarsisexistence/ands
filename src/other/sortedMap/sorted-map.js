@@ -1,5 +1,3 @@
-import { ListNodeNext } from '../../utils/node';
-
 export const SORTED_MAP_INTERNAL = '__ds__';
 /**
  * interface SortedMap<K, V> {}
@@ -78,5 +76,4 @@ export function set(map, key, value) {
  *   initial: U
  * ): U
  **/
-export const reduce = (map, f, initial) =>
-  [...map.keys()].reduce((acc, k) => f(acc, map.get(k), k), initial);
+export const reduce = (map, f, initial) => [...map.keys()].reduce((acc, k) => f(acc, map.get(k), k), initial);
