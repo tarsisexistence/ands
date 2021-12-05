@@ -1,4 +1,9 @@
 /**
+ * Leetcode #1603
+ * Difficulty: Easy
+ * https://leetcode.com/problems/design-parking-system/
+ */
+/**
  * @param {number} big
  * @param {number} medium
  * @param {number} small
