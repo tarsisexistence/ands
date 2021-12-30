@@ -1,5 +1,5 @@
 import { isUnivalTree } from './univalued-binary-tree';
-import { createTree } from '../../other/createTree/createTree';
+import { createTree } from '../../other/create-tree/create-tree';
 
 describe('[Leetcode] isUnivalTree', () => {
   test('example #1', () => {

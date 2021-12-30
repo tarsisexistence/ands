@@ -1,5 +1,5 @@
 import { trimBST } from './trim-a-binary-search-tree';
-import { createTree } from '../../other/createTree/createTree';
+import { createTree } from '../../other/create-tree/create-tree';
 
 describe('[Leetcode] trimBST', () => {
   test('example #1', () => {

@@ -1,6 +1,6 @@
-import { recursiveBinarySearch } from './recursiveBinarySearch';
+import { recursiveBinarySearch } from './recursive-binary-search';
 
-describe('[Other] recursiveBinarySearch', () => {
+describe('[Other] recursive-binary-search', () => {
   test('example #1', () => {
     expect(recursiveBinarySearch([3, 4, 5], 5)).toBe(2);
   });

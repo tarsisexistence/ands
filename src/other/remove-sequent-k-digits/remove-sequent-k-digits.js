@@ -3,7 +3,7 @@
  * @param {number} k
  * @return {string}
  */
-export const removeSequentKdigits = (num, k) => {
+export const removeSequentKDigits = (num, k) => {
   if (num.length <= k) {
     return '0';
   }

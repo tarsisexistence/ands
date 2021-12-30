@@ -1,5 +1,5 @@
 import { isSameTree } from './same-tree';
-import { createTree } from '../../other/createTree/createTree';
+import { createTree } from '../../other/create-tree/create-tree';
 
 describe('[Leetcode] isSameTree', () => {
   test('example #1', () => {

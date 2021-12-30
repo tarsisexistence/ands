@@ -1,4 +1,4 @@
-import { createTree } from '../../other/createTree/createTree';
+import { createTree } from '../../other/create-tree/create-tree';
 import { levelOrder } from './binary-tree-level-order-traversal';
 
 describe('[Leetcode] levelOrder', () => {

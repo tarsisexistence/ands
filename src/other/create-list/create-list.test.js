@@ -1,7 +1,7 @@
 import { ListNode, ListNodeNext, TreeNode } from '../../utils/node';
-import { createList } from './createList';
+import { createList } from './create-list';
 
-describe('[Other] createList', () => {
+describe('[Other] create-list', () => {
   test('should return null', () => {
     expect(createList([])).toBe(null);
   });

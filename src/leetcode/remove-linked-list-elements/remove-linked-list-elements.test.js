@@ -1,5 +1,5 @@
 import { removeElements } from './remove-linked-list-elements';
-import { createList } from '../../other/createList/createList';
+import { createList } from '../../other/create-list/create-list';
 
 describe('[Leetcode] removeElements', () => {
   test('example #1', () => {

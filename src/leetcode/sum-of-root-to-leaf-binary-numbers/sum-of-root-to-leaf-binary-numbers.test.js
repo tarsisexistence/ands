@@ -1,5 +1,5 @@
 import { sumRootToLeaf } from './sum-of-root-to-leaf-binary-numbers';
-import { createTree } from '../../other/createTree/createTree';
+import { createTree } from '../../other/create-tree/create-tree';
 
 describe('[Leetcode] sumRootToLeaf', () => {
   test('example #1', () => {
