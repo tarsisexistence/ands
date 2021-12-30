@@ -1,4 +1,9 @@
 /**
+ * Leetcode #402
+ * Difficulty: Medium
+ * https://leetcode.com/problems/remove-k-digits/
+ */
+/**
  * @param {string} num
  * @param {number} k
  * @return {string}
@@ -9,19 +14,18 @@ export const removeSequentKDigits = (num, k) => {
   }
 
   let min = Number(num);
-  const sum = Number(num);
 
   for (let i = 0; i < num.length - k; i += 1) {
     let remaining = '';
-    let tap = '';
 
     for (let j = 0; j < num.length; j += 1) {
       if (j >= i && j < i + k) {
-        tap += num[j];
-      } else {
-        remaining += num[j];
+        continue;
       }
+
+      remaining += num[j];
     }
+
     min = Math.min(min, Number(remaining));
   }
 

@@ -12,6 +12,7 @@ describe('[Other] removeSequentKDigits', () => {
   test('example #3', () => {
     expect(removeSequentKDigits('10200', 2)).toBe('100');
   });
+
   test('example #4', () => {
     expect(removeSequentKDigits('10200', 3)).toBe('0');
   });
