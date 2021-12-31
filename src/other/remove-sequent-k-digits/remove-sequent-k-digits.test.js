@@ -1,6 +1,6 @@
 import { removeSequentKDigits } from './remove-sequent-k-digits';
 
-describe('[Leetcode] removeSequentKDigits', () => {
+describe('[Other] removeSequentKDigits', () => {
   test('example #1', () => {
     expect(removeSequentKDigits('1432219', 3)).toBe('1219');
   });
@@ -24,6 +24,7 @@ describe('[Leetcode] removeSequentKDigits', () => {
   test('example #6', () => {
     expect(removeSequentKDigits('10', 2)).toBe('0');
   });
+
   test('example #7', () => {
     expect(removeSequentKDigits('10', 1)).toBe('0');
   });
@@ -32,7 +33,7 @@ describe('[Leetcode] removeSequentKDigits', () => {
     expect(removeSequentKDigits('1234567890', 9)).toBe('0');
   });
 
-  test('example #8', () => {
+  test('example #9', () => {
     expect(removeSequentKDigits('1234567890', 4)).toBe('123450');
   });
 });

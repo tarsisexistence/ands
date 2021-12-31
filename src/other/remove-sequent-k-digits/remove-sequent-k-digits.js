@@ -1,9 +1,4 @@
 /**
- * Leetcode #402
- * Difficulty: Medium
- * https://leetcode.com/problems/remove-k-digits/
- */
-/**
  * @param {string} num
  * @param {number} k
  * @return {string}
