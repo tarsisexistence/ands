@@ -1,7 +1,7 @@
 /**
  * Algorithm: quick sort
  * Complexity: O(N*log(N))
- * Links: https://github.com/v8/v8/blob/950d2051a5ff065a5bc1d31f0e5d1bba850d0b3c/src/array.js#L893-L1173
+ * Reference: https://github.com/v8/v8/blob/950d2051a5ff065a5bc1d31f0e5d1bba850d0b3c/src/array.js#L893-L1173
  */
 export function quickSort(arr, left = 0, right = arr.length - 1) {
   if (left < right) {
@@ -36,20 +36,20 @@ function partition(arr, left, right) {
   return left;
 }
 
-export const basicQuickSort = (array) => {
+export const basicQuickSort = array => {
   if (array.length < 2) {
     return array;
   }
 
   const pivot = array[Math.ceil(array.length / 2)];
-  const left = array.filter((v) => v < pivot);
-  const right = array.filter((v) => v > pivot);
-  const equals = array.filter((v) => v === pivot);
+  const left = array.filter(v => v < pivot);
+  const right = array.filter(v => v > pivot);
+  const equals = array.filter(v => v === pivot);
 
-  return [...quickSort(left), ...equals, ...quickSort(right)];
+  return [...basicQuickSort(left), ...equals, ...basicQuickSort(right)];
 };
 
-export const straightforwardQuickSort = (arr) => {
+export const straightforwardQuickSort = arr => {
   if (arr.length < 2) {
     return arr;
   }
@@ -70,11 +70,7 @@ export const straightforwardQuickSort = (arr) => {
     }
   }
 
-  return [
-    ...straightforwardQuickSort(left),
-    ...equals,
-    ...straightforwardQuickSort(right)
-  ];
+  return [...straightforwardQuickSort(left), ...equals, ...straightforwardQuickSort(right)];
 };
 
 // without random

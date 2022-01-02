@@ -1,7 +1,7 @@
 import { sortByMerge } from './merge.sort';
 
 describe('[Sort] merge', () => {
-  test('should sort array ', () => {
+  test('should sort array', () => {
     const unsorted = [1, 3, 5, 4, 2];
     const sorted = [1, 2, 3, 4, 5];
     expect(sortByMerge(unsorted)).toEqual(sorted);
