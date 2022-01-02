@@ -15,7 +15,7 @@ export function quickSort(arr, left = 0, right = arr.length - 1) {
 }
 
 function partition(arr, left, right) {
-  const pivot = Math.floor(Math.floor((right + left) / 2));
+  const pivot = Math.floor((right + left) / 2);
 
   while (right >= left) {
     while (arr[left] < arr[pivot]) {
@@ -74,36 +74,36 @@ export const straightforwardQuickSort = arr => {
 };
 
 // without random
-// export function qsort(input) {
-//   return dnq(input);
-//
-//   function dnq(array) {
-//     if (array.length < 2) {
-//       return array;
-//     }
-//
-//     if (array.length === 2) {
-//       if (array[0] > array[1]) {
-//         [array[0], array[1]] = [array[1], array[0]];
-//       }
-//
-//       return array;
-//     }
-//
-//     const supporting = array[0];
-//     const left = [];
-//     const right = [];
-//
-//     for (let i = 1; i < array.length; i += 1) {
-//       const num = array[i];
-//
-//       if (num < supporting) {
-//         left.push(num);
-//       } else {
-//         right.push(num);
-//       }
-//     }
-//
-//     return [...dnq(left), supporting, ...dnq(right)];
-//   }
-// }
+export function quickSortWithoutRandom(input) {
+  return dnq(input);
+
+  function dnq(array) {
+    if (array.length < 2) {
+      return array;
+    }
+
+    if (array.length === 2) {
+      if (array[0] > array[1]) {
+        [array[0], array[1]] = [array[1], array[0]];
+      }
+
+      return array;
+    }
+
+    const supporting = array[array.length - 1];
+    const left = [];
+    const right = [];
+
+    for (let i = 1; i < array.length; i += 1) {
+      const num = array[i];
+
+      if (num < supporting) {
+        left.push(num);
+      } else {
+        right.push(num);
+      }
+    }
+
+    return [...dnq(left), supporting, ...dnq(right)];
+  }
+}
