@@ -23,4 +23,10 @@ describe('[Sort] quick', () => {
     const sorted = [3, 4, 4, 5, 7, 9];
     expect(quickSort(unsorted)).toEqual(sorted);
   });
+
+  test('should sort another array', () => {
+    const unsorted = [-2, 3, -1, 5, 4, -3, 0];
+    const sorted = [-3, -2, -1, 0, 3, 4, 5];
+    expect(quickSort(unsorted)).toEqual(sorted);
+  });
 });

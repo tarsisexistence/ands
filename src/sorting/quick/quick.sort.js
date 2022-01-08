@@ -8,32 +8,29 @@ export function quickSort(arr, left = 0, right = arr.length - 1) {
     const index = partition(arr, left, right);
 
     quickSort(arr, left, index - 1);
-    quickSort(arr, index, right);
+    quickSort(arr, index + 1, right);
   }
 
   return arr;
 }
 
-function partition(arr, left, right) {
-  const pivot = Math.floor((right + left) / 2);
+function partition(arr, l, r) {
+  let p = l - 1;
+  const pivot = arr[r];
 
-  while (right >= left) {
-    while (arr[left] < arr[pivot]) {
-      left += 1;
+  while (l < r) {
+    if (arr[l] < pivot) {
+      p += 1;
+
+      [arr[p], arr[l]] = [arr[l], arr[p]];
     }
 
-    while (arr[right] > arr[pivot]) {
-      right -= 1;
-    }
-
-    if (right >= left) {
-      [arr[left], arr[right]] = [arr[right], arr[left]];
-      left += 1;
-      right -= 1;
-    }
+    l += 1;
   }
 
-  return left;
+  [arr[r], arr[p + 1]] = [arr[p + 1], arr[r]];
+
+  return p + 1;
 }
 
 export const basicQuickSort = array => {
