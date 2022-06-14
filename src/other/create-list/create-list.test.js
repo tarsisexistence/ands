@@ -1,4 +1,4 @@
-import { ListNode, ListNodeNext, TreeNode } from '../../utils/node';
+import { ListNode, ListNodeNext } from '../../utils/node';
 import { createList } from './create-list';
 
 describe('[Other] create-list', () => {
