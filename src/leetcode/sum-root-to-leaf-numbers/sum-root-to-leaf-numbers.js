@@ -8,16 +8,31 @@
  * @param {string} nums
  * @return {number}
  */
-const sumNumbers = (root, nums = '') => {
-  if (root === null) {
+export const sumNumbers = (root, sum = 0) => {
+  if (!root) {
     return 0;
   }
 
-  const value = nums + root.val;
-  return Boolean(root.left || root.right)
-    ? sumNumbers(root.left, value) + sumNumbers(root.right, value)
-    : Number(value);
+  const newSum = sum * 10 + root.val;
+
+  if (!root.left && !root.right) {
+    return newSum;
+  }
+
+  return sumNumbers(root.left, newSum) + sumNumbers(root.right, newSum);
 };
+
+// export const sumNumbers = (root, nums = '') => {
+//   if (root === null) {
+//     return 0;
+//   }
+//
+//   const value = nums + root.val;
+//
+//   return Boolean(root.left || root.right)
+//     ? sumNumbers(root.left, value) + sumNumbers(root.right, value)
+//     : Number(value);
+// };
 
 // const sumNumbers = root => {
 //     let sum = 0;
