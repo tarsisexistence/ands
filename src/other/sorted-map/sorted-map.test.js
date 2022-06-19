@@ -1,4 +1,4 @@
-import { create, reduce, set, SORTED_MAP_INTERNAL } from './sorted-map';
+import { create, reduce, set, SORTED_MAP_COMPARATOR_KEY } from './sorted-map';
 
 describe('[Other] sorted-map', () => {
   describe('create', () => {
@@ -19,7 +19,7 @@ describe('[Other] sorted-map', () => {
           ['a', 0],
           ['b', 1],
           ['c', 2],
-          [SORTED_MAP_INTERNAL, { comparator }]
+          [SORTED_MAP_COMPARATOR_KEY, comparator]
         ])
       );
     });
@@ -41,7 +41,7 @@ describe('[Other] sorted-map', () => {
           ['a', 0],
           ['b', 1],
           ['c', 2],
-          [SORTED_MAP_INTERNAL, { comparator }]
+          [SORTED_MAP_COMPARATOR_KEY, comparator]
         ])
       );
     });
@@ -63,7 +63,7 @@ describe('[Other] sorted-map', () => {
           ['c', 2],
           ['b', 1],
           ['a', 0],
-          [SORTED_MAP_INTERNAL, { comparator }]
+          [SORTED_MAP_COMPARATOR_KEY, comparator]
         ])
       );
     });
@@ -85,7 +85,7 @@ describe('[Other] sorted-map', () => {
           ['third', 'a'],
           ['first', 'b'],
           ['second', 'c'],
-          [SORTED_MAP_INTERNAL, { comparator }]
+          [SORTED_MAP_COMPARATOR_KEY, comparator]
         ])
       );
     });
@@ -109,7 +109,7 @@ describe('[Other] sorted-map', () => {
           ['c', true],
           ['b', false],
           ['d', false],
-          [SORTED_MAP_INTERNAL, { comparator }]
+          [SORTED_MAP_COMPARATOR_KEY, comparator]
         ])
       );
     });
@@ -126,14 +126,14 @@ describe('[Other] sorted-map', () => {
         ],
         comparator
       );
-      const updatedMap = set(map, SORTED_MAP_INTERNAL, 100);
+      const updatedMap = set(map, SORTED_MAP_COMPARATOR_KEY, 100);
 
       expect(updatedMap).toEqual(
         new Map([
           ['a', 0],
           ['b', 1],
           ['c', 2],
-          [SORTED_MAP_INTERNAL, { comparator }]
+          [SORTED_MAP_COMPARATOR_KEY, comparator]
         ])
       );
     });
@@ -154,7 +154,7 @@ describe('[Other] sorted-map', () => {
           ['a', 0],
           ['b', 1],
           ['c', 2],
-          [SORTED_MAP_INTERNAL, { comparator }]
+          [SORTED_MAP_COMPARATOR_KEY, comparator]
         ])
       );
     });
@@ -175,7 +175,7 @@ describe('[Other] sorted-map', () => {
           ['a', 0],
           ['b', 1],
           ['c', 2],
-          [SORTED_MAP_INTERNAL, { comparator }]
+          [SORTED_MAP_COMPARATOR_KEY, comparator]
         ])
       );
     });
@@ -196,7 +196,7 @@ describe('[Other] sorted-map', () => {
           ['a', 0],
           ['b', 1],
           ['c', 2],
-          [SORTED_MAP_INTERNAL, { comparator }]
+          [SORTED_MAP_COMPARATOR_KEY, comparator]
         ])
       );
     });
@@ -227,7 +227,7 @@ describe('[Other] sorted-map', () => {
           ['a', 0],
           ['b', 1],
           ['c', 2],
-          [SORTED_MAP_INTERNAL, { comparator }]
+          [SORTED_MAP_COMPARATOR_KEY, comparator]
         ])
       );
     });
@@ -245,7 +245,7 @@ describe('[Other] sorted-map', () => {
       const reducedMap = reduce(
         map,
         (m, v, k) => {
-          if (k === SORTED_MAP_INTERNAL) {
+          if (k === SORTED_MAP_COMPARATOR_KEY) {
             m.set(k, v);
           } else {
             m.set(k, v - 1);
@@ -260,7 +260,7 @@ describe('[Other] sorted-map', () => {
           ['a', -1],
           ['b', 0],
           ['c', 1],
-          [SORTED_MAP_INTERNAL, { comparator }]
+          [SORTED_MAP_COMPARATOR_KEY, comparator]
         ])
       );
     });
@@ -275,7 +275,7 @@ describe('[Other] sorted-map', () => {
         ],
         comparator
       );
-      const reducedMap = reduce(map, (acc, v, k) => (k === SORTED_MAP_INTERNAL ? acc : acc + v), 0);
+      const reducedMap = reduce(map, (acc, v, k) => (k === SORTED_MAP_COMPARATOR_KEY ? acc : acc + v), 0);
 
       expect(reducedMap).toBe(3);
     });

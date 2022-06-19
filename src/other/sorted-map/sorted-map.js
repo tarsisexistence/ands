@@ -1,4 +1,4 @@
-export const SORTED_MAP_INTERNAL = '__ds__';
+export const SORTED_MAP_COMPARATOR_KEY = '__ds__';
 /**
  * interface SortedMap<K, V> {}
  * type Order = -1 | 0 | 1
@@ -18,17 +18,10 @@ export const SORTED_MAP_INTERNAL = '__ds__';
  * ): SortedMap<K, V>
  **/
 export function create(pairs, comparator) {
-  const sorted = pairs.sort((a, b) => comparator(a[1], b[1]));
-  const map = new Map();
+  const sortedPairs = pairs.sort((a, b) => comparator(a[1], b[1]));
+  const map = new Map(sortedPairs);
 
-  for (let i = 0; i < sorted.length; i += 1) {
-    const pair = sorted[i];
-    map.set(pair[0], pair[1]);
-  }
-
-  map.set(SORTED_MAP_INTERNAL, {
-    comparator
-  });
+  map.set(SORTED_MAP_COMPARATOR_KEY, comparator);
 
   return map;
 }
@@ -37,32 +30,30 @@ export function create(pairs, comparator) {
  * declare function set<K, V>(map: SortedMap<K, V>, key: K, value: V): SortedMap<K, V>
  **/
 export function set(map, key, value) {
-  if (key === SORTED_MAP_INTERNAL) {
+  if (key === SORTED_MAP_COMPARATOR_KEY) {
     return map;
   }
 
   const keys = Object.keys(map);
-  let wasSet = false;
+  let isSet = false;
 
-  for (let i = 0; i < keys.length; i += 1) {
-    const k = keys[i];
-    const v = map.get(k);
-
-    if (k === SORTED_MAP_INTERNAL || wasSet) {
-      map.set(k, v);
+  for (const [k, v] in map) {
+    if (k === SORTED_MAP_INTERNAL) {
       continue;
     }
 
-    const comparison = map[SORTED_MAP_INTERNAL].comparator(v[1], value);
+    const comparator = map[SORTED_MAP_INTERNAL];
+    const comparison = comparator(v, value);
 
     if (comparison !== 1) {
       map.set(key, value);
       map.set(k, v);
-      wasSet = true;
+      isSet = true;
+      break;
     }
   }
 
-  if (!wasSet) {
+  if (!isSet) {
     map.set(key, value);
   }
 
