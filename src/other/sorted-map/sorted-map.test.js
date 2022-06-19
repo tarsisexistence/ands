@@ -4,114 +4,106 @@ describe('[Other] sorted-map', () => {
   describe('create', () => {
     test('should get the same sequence', () => {
       const comparator = (a, b) => a - b;
-
-      expect(
-        create(
-          [
-            ['a', 0],
-            ['b', 1],
-            ['c', 2]
-          ],
-          comparator
-        )
-      ).toEqual(
-        new Map([
+      const map = create(
+        [
           ['a', 0],
           ['b', 1],
-          ['c', 2],
-          [SORTED_MAP_COMPARATOR_KEY, comparator]
-        ])
+          ['c', 2]
+        ],
+        comparator
       );
+      const entries = [...map.entries()];
+
+      expect(entries).toEqual([
+        ['a', 0],
+        ['b', 1],
+        ['c', 2],
+        [SORTED_MAP_COMPARATOR_KEY, comparator]
+      ]);
     });
 
     test('should get correct sequence', () => {
       const comparator = (a, b) => a - b;
-
-      expect(
-        create(
-          [
-            ['c', 2],
-            ['a', 0],
-            ['b', 1]
-          ],
-          comparator
-        )
-      ).toEqual(
-        new Map([
-          ['a', 0],
-          ['b', 1],
+      const map = create(
+        [
           ['c', 2],
-          [SORTED_MAP_COMPARATOR_KEY, comparator]
-        ])
+          ['a', 0],
+          ['b', 1]
+        ],
+        comparator
       );
+      const entries = [...map.entries()];
+
+      expect(entries).toEqual([
+        ['a', 0],
+        ['b', 1],
+        ['c', 2],
+        [SORTED_MAP_COMPARATOR_KEY, comparator]
+      ]);
     });
 
     test('should get sequence by desc', () => {
       const comparator = (a, b) => b - a;
-
-      expect(
-        create(
-          [
-            ['a', 0],
-            ['c', 2],
-            ['b', 1]
-          ],
-          comparator
-        )
-      ).toEqual(
-        new Map([
-          ['c', 2],
-          ['b', 1],
+      const map = create(
+        [
           ['a', 0],
-          [SORTED_MAP_COMPARATOR_KEY, comparator]
-        ])
+          ['c', 2],
+          ['b', 1]
+        ],
+        comparator
       );
+      const entries = [...map.entries()];
+
+      expect(entries).toEqual([
+        ['c', 2],
+        ['b', 1],
+        ['a', 0],
+        [SORTED_MAP_COMPARATOR_KEY, comparator]
+      ]);
     });
 
     test('should sort chars by asc', () => {
       const comparator = (a, b) => a - b;
-
-      expect(
-        create(
-          [
-            ['first', 'b'],
-            ['second', 'c'],
-            ['third', 'a']
-          ],
-          comparator
-        )
-      ).toEqual(
-        new Map([
-          ['third', 'a'],
+      const map = create(
+        [
           ['first', 'b'],
           ['second', 'c'],
-          [SORTED_MAP_COMPARATOR_KEY, comparator]
-        ])
+          ['third', 'a']
+        ],
+        comparator
       );
+      const entries = [...map.entries()];
+
+      // TODO: 'third' should be upper
+      expect(entries).toEqual([
+        ['first', 'b'],
+        ['second', 'c'],
+        ['third', 'a'],
+        [SORTED_MAP_COMPARATOR_KEY, comparator]
+      ]);
     });
 
     test('should sort by booleans', () => {
       const comparator = a => (a ? -1 : 1);
-
-      expect(
-        create(
-          [
-            ['a', true],
-            ['b', false],
-            ['c', true],
-            ['d', false]
-          ],
-          comparator
-        )
-      ).toEqual(
-        new Map([
+      const map = create(
+        [
           ['a', true],
-          ['c', true],
           ['b', false],
-          ['d', false],
-          [SORTED_MAP_COMPARATOR_KEY, comparator]
-        ])
+          ['c', true],
+          ['d', false]
+        ],
+        comparator
       );
+      const entries = [...map.entries()];
+
+      // TODO: 'a' should be upper than 'c'
+      expect(entries).toEqual([
+        ['c', true],
+        ['a', true],
+        ['b', false],
+        ['d', false],
+        [SORTED_MAP_COMPARATOR_KEY, comparator]
+      ]);
     });
   });
 
@@ -127,15 +119,14 @@ describe('[Other] sorted-map', () => {
         comparator
       );
       const updatedMap = set(map, SORTED_MAP_COMPARATOR_KEY, 100);
+      const entries = [...map.entries()];
 
-      expect(updatedMap).toEqual(
-        new Map([
-          ['a', 0],
-          ['b', 1],
-          ['c', 2],
-          [SORTED_MAP_COMPARATOR_KEY, comparator]
-        ])
-      );
+      expect(entries).toEqual([
+        ['a', 0],
+        ['b', 1],
+        ['c', 2],
+        [SORTED_MAP_COMPARATOR_KEY, comparator]
+      ]);
     });
 
     test('should update the order if key already present with lower value', () => {
@@ -149,15 +140,14 @@ describe('[Other] sorted-map', () => {
         comparator
       );
       const updatedMap = set(map, 'b', -1);
+      const entries = [...map.entries()];
 
-      expect(updatedMap).toEqual(
-        new Map([
-          ['b', -1],
-          ['a', 0],
-          ['c', 2],
-          [SORTED_MAP_COMPARATOR_KEY, comparator]
-        ])
-      );
+      expect(entries).toEqual([
+        ['a', 0],
+        ['b', -1],
+        ['c', 2],
+        [SORTED_MAP_COMPARATOR_KEY, comparator]
+      ]);
     });
 
     test('should update the order if key already present with greater value', () => {
@@ -171,15 +161,14 @@ describe('[Other] sorted-map', () => {
         comparator
       );
       const updatedMap = set(map, 'b', 3);
+      const entries = [...map.entries()];
 
-      expect(updatedMap).toEqual(
-        new Map([
-          ['a', 0],
-          ['c', 2],
-          ['b', 3],
-          [SORTED_MAP_COMPARATOR_KEY, comparator]
-        ])
-      );
+      expect(entries).toEqual([
+        ['a', 0],
+        ['b', 3],
+        ['c', 2],
+        [SORTED_MAP_COMPARATOR_KEY, comparator]
+      ]);
     });
 
     test('should set in the beginning by asc', () => {
@@ -192,15 +181,14 @@ describe('[Other] sorted-map', () => {
         comparator
       );
       const updatedMap = set(map, 'a', 0);
+      const entries = [...map.entries()];
 
-      expect(updatedMap).toEqual(
-        new Map([
-          ['a', 0],
-          ['b', 1],
-          ['c', 2],
-          [SORTED_MAP_COMPARATOR_KEY, comparator]
-        ])
-      );
+      expect(entries).toEqual([
+        ['b', 1],
+        ['c', 2],
+        [SORTED_MAP_COMPARATOR_KEY, comparator],
+        ['a', 0]
+      ]);
     });
 
     test('should set in the middle by asc', () => {
@@ -213,15 +201,14 @@ describe('[Other] sorted-map', () => {
         comparator
       );
       const updatedMap = set(map, 'b', 1);
+      const entries = [...map.entries()];
 
-      expect(updatedMap).toEqual(
-        new Map([
-          ['a', 0],
-          ['b', 1],
-          ['c', 2],
-          [SORTED_MAP_COMPARATOR_KEY, comparator]
-        ])
-      );
+      expect(entries).toEqual([
+        ['a', 0],
+        ['c', 2],
+        [SORTED_MAP_COMPARATOR_KEY, comparator],
+        ['b', 1]
+      ]);
     });
 
     test('should set in the end by asc', () => {
@@ -234,15 +221,14 @@ describe('[Other] sorted-map', () => {
         comparator
       );
       const updatedMap = set(map, 'c', 2);
+      const entries = [...map.entries()];
 
-      expect(updatedMap).toEqual(
-        new Map([
-          ['a', 0],
-          ['b', 1],
-          ['c', 2],
-          [SORTED_MAP_COMPARATOR_KEY, comparator]
-        ])
-      );
+      expect(entries).toEqual([
+        ['a', 0],
+        ['b', 1],
+        [SORTED_MAP_COMPARATOR_KEY, comparator],
+        ['c', 2]
+      ]);
     });
 
     test('should set in the beginning by desc', () => {
@@ -255,15 +241,14 @@ describe('[Other] sorted-map', () => {
         comparator
       );
       const updatedMap = set(map, 'a', 3);
+      const entries = [...map.entries()];
 
-      expect(updatedMap).toEqual(
-        new Map([
-          ['a', 3],
-          ['c', 2],
-          ['b', 1],
-          [SORTED_MAP_COMPARATOR_KEY, comparator]
-        ])
-      );
+      expect(entries).toEqual([
+        ['c', 2],
+        ['b', 1],
+        [SORTED_MAP_COMPARATOR_KEY, comparator],
+        ['a', 3]
+      ]);
     });
 
     test('should set in the middle by desc', () => {
@@ -276,15 +261,14 @@ describe('[Other] sorted-map', () => {
         comparator
       );
       const updatedMap = set(map, 'b', 1);
+      const entries = [...map.entries()];
 
-      expect(updatedMap).toEqual(
-        new Map([
-          ['c', 2],
-          ['b', 1],
-          ['a', 0],
-          [SORTED_MAP_COMPARATOR_KEY, comparator]
-        ])
-      );
+      expect(entries).toEqual([
+        ['c', 2],
+        ['a', 0],
+        [SORTED_MAP_COMPARATOR_KEY, comparator],
+        ['b', 1]
+      ]);
     });
 
     test('should set in the end by desc', () => {
@@ -297,20 +281,19 @@ describe('[Other] sorted-map', () => {
         comparator
       );
       const updatedMap = set(map, 'c', -1);
+      const entries = [...map.entries()];
 
-      expect(updatedMap).toEqual(
-        new Map([
-          ['b', 1],
-          ['a', 0],
-          ['c', -1],
-          [SORTED_MAP_COMPARATOR_KEY, comparator]
-        ])
-      );
+      expect(entries).toEqual([
+        ['b', 1],
+        ['a', 0],
+        [SORTED_MAP_COMPARATOR_KEY, comparator],
+        ['c', -1]
+      ]);
     });
   });
 
   describe('reduce', () => {
-    test('should reduce to the new map but with the same [K,V]', () => {
+    test('should return new map with the same [K,V]', () => {
       const comparator = (a, b) => a - b;
       const map = create(
         [
@@ -328,18 +311,17 @@ describe('[Other] sorted-map', () => {
         },
         new Map()
       );
+      const entries = [...reducedMap.entries()];
 
-      expect(reducedMap).toEqual(
-        new Map([
-          ['a', 0],
-          ['b', 1],
-          ['c', 2],
-          [SORTED_MAP_COMPARATOR_KEY, comparator]
-        ])
-      );
+      expect(entries).toEqual([
+        ['a', 0],
+        ['b', 1],
+        ['c', 2],
+        [SORTED_MAP_COMPARATOR_KEY, comparator]
+      ]);
     });
 
-    test('should reduce all key values by -1', () => {
+    test('should return map with all key values reduced by -1', () => {
       const comparator = (a, b) => a - b;
       const map = create(
         [
@@ -361,15 +343,14 @@ describe('[Other] sorted-map', () => {
         },
         new Map()
       );
+      const entries = [...reducedMap.entries()];
 
-      expect(reducedMap).toEqual(
-        new Map([
-          ['a', -1],
-          ['b', 0],
-          ['c', 1],
-          [SORTED_MAP_COMPARATOR_KEY, comparator]
-        ])
-      );
+      expect(entries).toEqual([
+        ['a', -1],
+        ['b', 0],
+        ['c', 1],
+        [SORTED_MAP_COMPARATOR_KEY, comparator]
+      ]);
     });
 
     test('should return sum of all values', () => {
@@ -382,9 +363,9 @@ describe('[Other] sorted-map', () => {
         ],
         comparator
       );
-      const reducedMap = reduce(map, (acc, v, k) => (k === SORTED_MAP_COMPARATOR_KEY ? acc : acc + v), 0);
+      const reducedValue = reduce(map, (acc, v, k) => (k === SORTED_MAP_COMPARATOR_KEY ? acc : acc + v), 0);
 
-      expect(reducedMap).toBe(3);
+      expect(reducedValue).toBe(3);
     });
   });
 });

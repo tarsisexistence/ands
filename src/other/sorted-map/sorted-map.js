@@ -1,4 +1,5 @@
-export const SORTED_MAP_COMPARATOR_KEY = '__ds__';
+export const SORTED_MAP_COMPARATOR_KEY = '__ds__'; // TODO: should not be iterable
+
 /**
  * interface SortedMap<K, V> {}
  * type Order = -1 | 0 | 1
@@ -43,7 +44,10 @@ export function set(map, key, value) {
     }
 
     const comparator = map[SORTED_MAP_INTERNAL];
+    // TODO: check
     const comparison = comparator(v, value);
+
+    console.log(comparison);
 
     if (comparison !== 1) {
       map.set(key, value);
