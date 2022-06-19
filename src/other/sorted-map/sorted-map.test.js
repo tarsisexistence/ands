@@ -1,6 +1,6 @@
 import { create, reduce, set, SORTED_MAP_INTERNAL } from './sorted-map';
 
-describe('[Other] sortedMap', () => {
+describe('[Other] sorted-map', () => {
   describe('create', () => {
     test('should get the same sequence', () => {
       const comparator = (a, b) => a - b;
@@ -275,11 +275,7 @@ describe('[Other] sortedMap', () => {
         ],
         comparator
       );
-      const reducedMap = reduce(
-        map,
-        (acc, v, k) => (k === SORTED_MAP_INTERNAL ? acc : acc + v),
-        0
-      );
+      const reducedMap = reduce(map, (acc, v, k) => (k === SORTED_MAP_INTERNAL ? acc : acc + v), 0);
 
       expect(reducedMap).toBe(3);
     });
