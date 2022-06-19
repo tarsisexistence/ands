@@ -1,6 +1,14 @@
 import { insertIterableGenerator, insertIterator, iterableGenerator } from './iterable';
 
 describe('[Other] Iterable', () => {
+  test('should insert iterator', () => {
+    const object = {
+      items: ['first', 'second', 'third'],
+      ...insertIterator('items')
+    };
+    expect([...object]).toEqual(['first', 'second', 'third']);
+  });
+
   test('should iterate array over iterableGenerator', () => {
     const object = {
       [Symbol.iterator]: function () {
@@ -49,14 +57,6 @@ describe('[Other] Iterable', () => {
           }
         };
       }
-    };
-    expect([...object]).toEqual(['first', 'second', 'third']);
-  });
-
-  test('should insert iterator', () => {
-    const object = {
-      items: ['first', 'second', 'third'],
-      ...insertIterator('items')
     };
     expect([...object]).toEqual(['first', 'second', 'third']);
   });

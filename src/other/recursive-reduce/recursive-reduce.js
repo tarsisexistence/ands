@@ -1,10 +1,12 @@
-export const recursiveReduce = (array, callback, previousValue, currentIndex = 0) => {
+export const recursiveReduce = (array, f, initial, currentIndex = 0) => {
+  const previousValue = initial;
+
   if (currentIndex >= array.length) {
-    return previousValue;
+    return initial;
   }
 
   const currentValue = array[currentIndex];
-  const nextValue = callback(previousValue, currentValue, currentIndex, array);
+  const nextValue = f(initial, currentValue, currentIndex, array);
 
-  return recursiveReduce(array, callback, nextValue, currentIndex + 1);
+  return recursiveReduce(array, f, nextValue, currentIndex + 1);
 };
