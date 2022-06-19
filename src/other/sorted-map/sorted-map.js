@@ -38,13 +38,12 @@ export function set(map, key, value) {
   const keys = Object.keys(map);
   let isSet = false;
 
-  for (const [k, v] in map) {
-    if (k === SORTED_MAP_INTERNAL) {
+  for (const [k, v] of map) {
+    if (k === SORTED_MAP_COMPARATOR_KEY) {
       continue;
     }
 
-    const comparator = map[SORTED_MAP_INTERNAL];
-    // TODO: check
+    const comparator = map.get(SORTED_MAP_COMPARATOR_KEY);
     const comparison = comparator(v, value);
 
     console.log(comparison);
