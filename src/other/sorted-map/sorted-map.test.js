@@ -105,6 +105,23 @@ describe('[Other] sorted-map', () => {
         [SORTED_MAP_COMPARATOR_KEY, comparator]
       ]);
     });
+
+    test('should preserve initial sorting order of the same values', () => {
+      const comparator = (a, b) => a - b;
+      const map = create(
+        [
+          ['a', 2],
+          ['c', 2]
+        ],
+        comparator
+      );
+
+      expect([...map.entries()]).toEqual([
+        ['a', 2],
+        ['c', 2],
+        [SORTED_MAP_COMPARATOR_KEY, comparator]
+      ]);
+    });
   });
 
   describe('set', () => {

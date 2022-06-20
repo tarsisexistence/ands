@@ -19,7 +19,12 @@ export const SORTED_MAP_COMPARATOR_KEY = '__ds__'; // TODO: should not be iterab
  * ): SortedMap<K, V>
  **/
 export function create(pairs, comparator) {
-  const sortedPairs = pairs.sort((a, b) => comparator(a[1], b[1]));
+  const copiedPairs = pairs.slice();
+  const indicesByKey = new Map(copiedPairs.map((pair, index) => [pair[0], index]));
+  const sortedPairs = copiedPairs.sort((a, b) => {
+    const comparison = comparator(a[1], b[1]);
+    return comparison === 0 ? indicesByKey.get(a[0]) - indicesByKey.get(b[0]) : comparison;
+  });
   const map = new Map(sortedPairs);
 
   map.set(SORTED_MAP_COMPARATOR_KEY, comparator);
