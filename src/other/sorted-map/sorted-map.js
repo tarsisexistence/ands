@@ -35,30 +35,43 @@ export function set(map, key, value) {
     return map;
   }
 
-  const keys = Object.keys(map);
+  /**
+   * it will be compared and set inside the loop
+   */
+  if (map.has(key)) {
+    map.delete(key);
+  }
+
   let isSet = false;
 
-  for (const [k, v] of map) {
+  const comparator = map.get(SORTED_MAP_COMPARATOR_KEY);
+  const entries = Array.from(map.entries());
+
+  for (const [k, v] of entries) {
     if (k === SORTED_MAP_COMPARATOR_KEY) {
       continue;
     }
 
-    const comparator = map.get(SORTED_MAP_COMPARATOR_KEY);
-    const comparison = comparator(v, value);
+    const comparison = comparator(value, v);
 
-    console.log(comparison);
-
-    if (comparison !== 1) {
+    if (comparison < 0) {
       map.set(key, value);
-      map.set(k, v);
       isSet = true;
-      break;
     }
+
+    map.delete(k);
+    map.set(k, v);
   }
 
+  /**
+   * we just want to add this in the end
+   */
   if (!isSet) {
     map.set(key, value);
   }
+
+  map.delete(SORTED_MAP_COMPARATOR_KEY);
+  map.set(SORTED_MAP_COMPARATOR_KEY, comparator);
 
   return map;
 }
