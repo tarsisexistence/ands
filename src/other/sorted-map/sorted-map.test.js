@@ -12,9 +12,8 @@ describe('[Other] sorted-map', () => {
         ],
         comparator
       );
-      const entries = [...map.entries()];
 
-      expect(entries).toEqual([
+      expect([...map.entries()]).toEqual([
         ['a', 0],
         ['b', 1],
         ['c', 2],
@@ -32,9 +31,8 @@ describe('[Other] sorted-map', () => {
         ],
         comparator
       );
-      const entries = [...map.entries()];
 
-      expect(entries).toEqual([
+      expect([...map.entries()]).toEqual([
         ['a', 0],
         ['b', 1],
         ['c', 2],
@@ -52,9 +50,8 @@ describe('[Other] sorted-map', () => {
         ],
         comparator
       );
-      const entries = [...map.entries()];
 
-      expect(entries).toEqual([
+      expect([...map.entries()]).toEqual([
         ['c', 2],
         ['b', 1],
         ['a', 0],
@@ -63,7 +60,7 @@ describe('[Other] sorted-map', () => {
     });
 
     test('should sort chars by asc', () => {
-      const comparator = (a, b) => a - b;
+      const comparator = (a, b) => a.charCodeAt() - b.charCodeAt();
       const map = create(
         [
           ['first', 'b'],
@@ -72,13 +69,11 @@ describe('[Other] sorted-map', () => {
         ],
         comparator
       );
-      const entries = [...map.entries()];
 
-      // TODO: 'third' should be upper
-      expect(entries).toEqual([
+      expect([...map.entries()]).toEqual([
+        ['third', 'a'],
         ['first', 'b'],
         ['second', 'c'],
-        ['third', 'a'],
         [SORTED_MAP_COMPARATOR_KEY, comparator]
       ]);
     });
@@ -94,10 +89,9 @@ describe('[Other] sorted-map', () => {
         ],
         comparator
       );
-      const entries = [...map.entries()];
 
-      // TODO: 'a' should be upper than 'c'
-      expect(entries).toEqual([
+      // order changed because of comparator
+      expect([...map.entries()]).toEqual([
         ['c', true],
         ['a', true],
         ['b', false],
@@ -135,10 +129,9 @@ describe('[Other] sorted-map', () => {
         ],
         comparator
       );
-      const updatedMap = set(map, SORTED_MAP_COMPARATOR_KEY, 100);
-      const entries = [...map.entries()];
+      set(map, SORTED_MAP_COMPARATOR_KEY, 100);
 
-      expect(entries).toEqual([
+      expect([...map.entries()]).toEqual([
         ['a', 0],
         ['b', 1],
         ['c', 2],
@@ -156,12 +149,11 @@ describe('[Other] sorted-map', () => {
         ],
         comparator
       );
-      const updatedMap = set(map, 'b', -1);
-      const entries = [...map.entries()];
+      set(map, 'b', -1);
 
-      expect(entries).toEqual([
-        ['a', 0],
+      expect([...map.entries()]).toEqual([
         ['b', -1],
+        ['a', 0],
         ['c', 2],
         [SORTED_MAP_COMPARATOR_KEY, comparator]
       ]);
@@ -177,13 +169,12 @@ describe('[Other] sorted-map', () => {
         ],
         comparator
       );
-      const updatedMap = set(map, 'b', 3);
-      const entries = [...map.entries()];
+      set(map, 'b', 3);
 
-      expect(entries).toEqual([
+      expect([...map.entries()]).toEqual([
         ['a', 0],
-        ['b', 3],
         ['c', 2],
+        ['b', 3],
         [SORTED_MAP_COMPARATOR_KEY, comparator]
       ]);
     });
@@ -197,14 +188,13 @@ describe('[Other] sorted-map', () => {
         ],
         comparator
       );
-      const updatedMap = set(map, 'a', 0);
-      const entries = [...map.entries()];
+      set(map, 'a', 0);
 
-      expect(entries).toEqual([
+      expect([...map.entries()]).toEqual([
+        ['a', 0],
         ['b', 1],
         ['c', 2],
-        [SORTED_MAP_COMPARATOR_KEY, comparator],
-        ['a', 0]
+        [SORTED_MAP_COMPARATOR_KEY, comparator]
       ]);
     });
 
@@ -217,14 +207,13 @@ describe('[Other] sorted-map', () => {
         ],
         comparator
       );
-      const updatedMap = set(map, 'b', 1);
-      const entries = [...map.entries()];
+      set(map, 'b', 1);
 
-      expect(entries).toEqual([
+      expect([...map.entries()]).toEqual([
         ['a', 0],
+        ['b', 1],
         ['c', 2],
-        [SORTED_MAP_COMPARATOR_KEY, comparator],
-        ['b', 1]
+        [SORTED_MAP_COMPARATOR_KEY, comparator]
       ]);
     });
 
@@ -237,14 +226,13 @@ describe('[Other] sorted-map', () => {
         ],
         comparator
       );
-      const updatedMap = set(map, 'c', 2);
-      const entries = [...map.entries()];
+      set(map, 'c', 2);
 
-      expect(entries).toEqual([
+      expect([...map.entries()]).toEqual([
         ['a', 0],
         ['b', 1],
-        [SORTED_MAP_COMPARATOR_KEY, comparator],
-        ['c', 2]
+        ['c', 2],
+        [SORTED_MAP_COMPARATOR_KEY, comparator]
       ]);
     });
 
@@ -257,14 +245,13 @@ describe('[Other] sorted-map', () => {
         ],
         comparator
       );
-      const updatedMap = set(map, 'a', 3);
-      const entries = [...map.entries()];
+      set(map, 'a', 3);
 
-      expect(entries).toEqual([
+      expect([...map.entries()]).toEqual([
+        ['a', 3],
         ['c', 2],
         ['b', 1],
-        [SORTED_MAP_COMPARATOR_KEY, comparator],
-        ['a', 3]
+        [SORTED_MAP_COMPARATOR_KEY, comparator]
       ]);
     });
 
@@ -277,14 +264,13 @@ describe('[Other] sorted-map', () => {
         ],
         comparator
       );
-      const updatedMap = set(map, 'b', 1);
-      const entries = [...map.entries()];
+      set(map, 'b', 1);
 
-      expect(entries).toEqual([
+      expect([...map.entries()]).toEqual([
         ['c', 2],
+        ['b', 1],
         ['a', 0],
-        [SORTED_MAP_COMPARATOR_KEY, comparator],
-        ['b', 1]
+        [SORTED_MAP_COMPARATOR_KEY, comparator]
       ]);
     });
 
@@ -297,14 +283,13 @@ describe('[Other] sorted-map', () => {
         ],
         comparator
       );
-      const updatedMap = set(map, 'c', -1);
-      const entries = [...map.entries()];
+      set(map, 'c', -1);
 
-      expect(entries).toEqual([
+      expect([...map.entries()]).toEqual([
         ['b', 1],
         ['a', 0],
-        [SORTED_MAP_COMPARATOR_KEY, comparator],
-        ['c', -1]
+        ['c', -1],
+        [SORTED_MAP_COMPARATOR_KEY, comparator]
       ]);
     });
   });
@@ -328,9 +313,8 @@ describe('[Other] sorted-map', () => {
         },
         new Map()
       );
-      const entries = [...reducedMap.entries()];
 
-      expect(entries).toEqual([
+      expect([...reducedMap.entries()]).toEqual([
         ['a', 0],
         ['b', 1],
         ['c', 2],
@@ -360,9 +344,8 @@ describe('[Other] sorted-map', () => {
         },
         new Map()
       );
-      const entries = [...reducedMap.entries()];
 
-      expect(entries).toEqual([
+      expect([...reducedMap.entries()]).toEqual([
         ['a', -1],
         ['b', 0],
         ['c', 1],
