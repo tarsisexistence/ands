@@ -9,13 +9,7 @@
  * @return {number[]}
  */
 export const intersection = (nums1, nums2) => {
-  const map = Object.fromEntries(nums2.map((num) => [num, true]));
-  return nums1.filter((num) => {
-    if (map[num]) {
-      map[num] = false;
-      return true;
-    }
+  const set2 = new Set(nums2);
 
-    return false;
-  });
+  return [...new Set(nums1.filter(num => set2.has(num)))];
 };
