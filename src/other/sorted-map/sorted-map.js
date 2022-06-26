@@ -1,4 +1,4 @@
-export const SORTED_MAP_COMPARATOR_KEY = '__ds__'; // TODO: should not be iterable
+export const SORTED_MAP_COMPARATOR_KEY = '__ds__'; // TODO: should not be iterable (Object.defineProperties)
 
 /**
  * interface SortedMap<K, V> {}
