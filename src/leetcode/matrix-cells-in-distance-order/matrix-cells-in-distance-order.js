@@ -29,9 +29,9 @@ export const allCellsDistOrder = (rows, cols, r, c) => {
 
   return result;
 };
-// export const allCellsDistOrder = (rows, cols, r, c) => {
+// const allCellsDistOrder = (rows, cols, r, c) => {
 //     const result = [];
-//     let buckets = [];
+//     const buckets = [];
 //
 //     for (let i = 0; i < rows; i += 1) {
 //         for (let j = 0; j < cols; j += 1) {
