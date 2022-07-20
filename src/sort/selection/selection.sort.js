@@ -2,7 +2,7 @@
  * Algorithm: selection sort
  * Complexity: O(N^2)
  */
-export const sortBySelection = array => {
+export const selectionSort = array => {
   for (let i = 0; i < array.length; i += 1) {
     let minId = i;
 

@@ -4,7 +4,7 @@
  * JavaScript cache sort algorithm
  * Complexity: O(N)
  */
-export const sortByCache = input => {
+export const cacheSort = input => {
   const cache = {};
 
   input.forEach(value => {

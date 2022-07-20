@@ -2,17 +2,15 @@
  * Algorithm: bubble sort
  * Complexity: O(N^2)
  */
-export const sortByBubble = input => {
-  const array = [...input];
-  let lastStable = array.length;
+export const bubbleSort = array => {
   let hasSwapped = false;
 
-  while (lastStable > 0) {
+  for (let i = 0; i < array.length; i += 1) {
     hasSwapped = false;
 
-    for (let i = 0; i < lastStable; i += 1) {
-      if (array[i] > array[i + 1]) {
-        [array[i], array[i + 1]] = [array[i + 1], array[i]];
+    for (let j = 0; j < array.length - i - 1; j += 1) {
+      if (array[j] > array[j + 1]) {
+        [array[j], array[j + 1]] = [array[j + 1], array[j]];
         hasSwapped = true;
       }
     }
@@ -20,10 +18,7 @@ export const sortByBubble = input => {
     if (!hasSwapped) {
       return array;
     }
-
-    lastStable -= 1;
   }
-
   return array;
 };
 
@@ -31,7 +26,7 @@ export const sortByBubble = input => {
  * Algorithm: bubble sort (inverted version)
  * Complexity: O(N^2)
  */
-export const sortByInvertedBubble = input => {
+export const bubbleSortInverted = input => {
   const array = [...input];
   let hasSwapped = false;
 

@@ -2,7 +2,7 @@
  * Algorithm: merge sort
  * Complexity: O(N*log(N))
  */
-export const sortByMerge = array => {
+export const mergeSort = array => {
   if (array.length < 2) {
     return array;
   }
@@ -11,7 +11,7 @@ export const sortByMerge = array => {
   const left = array.slice(0, delimiter);
   const right = array.slice(delimiter);
 
-  return merge(sortByMerge(left), sortByMerge(right));
+  return merge(mergeSort(left), mergeSort(right));
 };
 
 function merge(left, right) {
