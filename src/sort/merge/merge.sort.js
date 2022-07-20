@@ -31,3 +31,39 @@ function merge(left, right) {
 
   return sorted.concat(left.slice(leftId), right.slice(rightId));
 }
+
+// export const mergeSortAlternative = array => {
+//   if (array.length < 2) {
+//     return array;
+//   }
+//
+//   const middle = array.length / 2;
+//   const left = array.slice(0, middle);
+//   const right = array.slice(middle);
+//
+//   return merge(mergeSortNew(left), mergeSortNew(right));
+//
+//   function merge(left, right) {
+//     const sorted = [];
+//     let l = 0;
+//     let r = 0;
+//
+//     while (left[l] !== undefined && right[r] !== undefined) {
+//       if (left[l] < right[r]) {
+//         sorted.push(left[l]);
+//         l += 1;
+//       } else {
+//         sorted.push(right[r]);
+//         r += 1;
+//       }
+//     }
+//
+//     if (left[l] === undefined && right[r] !== undefined) {
+//       sorted.push(...right.slice(r));
+//     } else if (right[r] === undefined && left[l] !== undefined) {
+//       sorted.push(...left.slice(l));
+//     }
+//
+//     return sorted;
+//   }
+// };
