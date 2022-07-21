@@ -1,6 +1,6 @@
 import { isValid } from './valid-parentheses';
 
-describe('[Leetcode] isAnagram', () => {
+describe('[Leetcode] isValid', () => {
   test('example #1', () => {
     expect(isValid('()')).toBe(true);
   });

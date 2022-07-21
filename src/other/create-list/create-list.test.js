@@ -1,4 +1,4 @@
-import { ListNode, ListNodeNext } from '../../utils/node';
+import { ListNode } from '../../utils/node';
 import { createList } from './create-list';
 
 describe('[Other] create-list', () => {
@@ -15,12 +15,10 @@ describe('[Other] create-list', () => {
   });
 
   test('should return head with its list', () => {
-    expect(createList([1, 2, 3])).toEqual(new ListNodeNext(1, new ListNodeNext(2, new ListNodeNext(3))));
+    expect(createList([1, 2, 3])).toEqual(new ListNode(1, new ListNode(2, new ListNode(3))));
   });
 
   test('should return head with its list + intermediate null value', () => {
-    expect(createList([1, 2, null, 3])).toEqual(
-      new ListNodeNext(1, new ListNodeNext(2, new ListNodeNext(null, new ListNodeNext(3))))
-    );
+    expect(createList([1, 2, null, 3])).toEqual(new ListNode(1, new ListNode(2, new ListNode(null, new ListNode(3)))));
   });
 });
