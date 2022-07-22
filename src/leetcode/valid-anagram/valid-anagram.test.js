@@ -8,4 +8,12 @@ describe('[Leetcode] isAnagram', () => {
   test('example #2', () => {
     expect(isAnagram('rat', 'car')).toBe(false);
   });
+
+  test('example #3', () => {
+    expect(isAnagram('ab', 'a')).toBe(false);
+  });
+
+  test('example #4', () => {
+    expect(isAnagram('a', 'ab')).toBe(false);
+  });
 });
