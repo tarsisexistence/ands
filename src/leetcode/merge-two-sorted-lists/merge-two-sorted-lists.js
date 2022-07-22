@@ -3,12 +3,12 @@
  * Difficulty: Easy
  * https://leetcode.com/problems/merge-two-sorted-lists/
  */
-import { ListNode as ListNode } from '../../utils/node';
+import { ListNode } from '../../utils/node';
 
 /**
- * @param {ListNodeNext} list1
- * @param {ListNodeNext} list2
- * @return {ListNodeNext}
+ * @param {ListNode} list1
+ * @param {ListNode} list2
+ * @return {ListNode}
  */
 export const mergeTwoLists = (list1, list2) => {
   if (list1 === null && list2 !== null) {
@@ -34,6 +34,35 @@ export const mergeTwoLists = (list1, list2) => {
 
   return head;
 };
+
+// export const mergeTwoLists = (list1, list2) => {
+//   if (!list1) {
+//     list1 = list2;
+//     list2 = null;
+//   }
+//
+//   const head = list1;
+//
+//   while (list1 && list2) {
+//     if (list1.val > list2.val) {
+//       const list1Val = list1.val;
+//       list1.val = list2.val;
+//       list1.next = new ListNode(list1Val, list1.next);
+//       list1 = list1.next;
+//       list2 = list2.next;
+//       continue;
+//     }
+//
+//     if (!list1.next) {
+//       list1.next = list2;
+//       list2 = null;
+//     }
+//
+//     list1 = list1.next;
+//   }
+//
+//   return head;
+// };
 
 // export const mergeTwoLists = (list1, list2) => {
 //   const core = new ListNode();
