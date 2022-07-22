@@ -12,9 +12,9 @@
     "url": "git+https://github.com/tarsinzer/ands.git"
   },
   "bugs": {
-    "url": "https://github.com/untaggable/ands/issues"
+    "url": "https://github.com/tarsinzer/ands/issues"
   },
-  "homepage": "https://github.com/untaggable/ands#readme",
+  "homepage": "https://github.com/tarsinzer/ands#readme",
   "devDependencies": {
     "@babel/core": "7.18.9",
     "@babel/eslint-parser": "7.18.9",
