@@ -1,24 +1,24 @@
 /**
  * Leetcode #53
- * Difficulty: Easy
+ * Difficulty: Medium
  * https://leetcode.com/problems/maximum-subarray/
  * Algorithm: Kadane
  */
-/**
- * @param {number[]} nums
- * @return {number}
- */
-export const maxSubArray = nums => {
-  let maxSum = nums[0];
-  let currentSum = maxSum;
-
-  for (let i = 1; i < nums.length; i += 1) {
-    currentSum = Math.max(nums[i], currentSum + nums[i]);
-    maxSum = Math.max(maxSum, currentSum);
-  }
-
-  return maxSum;
-};
+// /**
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+// export const maxSubArray = nums => {
+//   let maxSum = nums[0];
+//   let currentSum = maxSum;
+//
+//   for (let i = 1; i < nums.length; i += 1) {
+//     currentSum = Math.max(nums[i], currentSum + nums[i]);
+//     maxSum = Math.max(maxSum, currentSum);
+//   }
+//
+//   return maxSum;
+// };
 
 // export const maxSubArray = nums => {
 //   let max = nums[0];
@@ -32,3 +32,15 @@ export const maxSubArray = nums => {
 //
 //   return max;
 // };
+
+export const maxSubArray = nums => {
+  let max = nums[0];
+  let sum = 0;
+
+  for (let i = 0; i < nums.length; i += 1) {
+    sum = Math.max(sum + nums[i], nums[i]);
+    max = Math.max(max, sum);
+  }
+
+  return max;
+};
