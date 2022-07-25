@@ -9,12 +9,12 @@ export const createList = values => {
     return null;
   }
 
-  const head = new ListNode(values.shift());
+  values.reverse();
+  const head = new ListNode(values.pop());
   let current = head;
 
   while (values.length > 0) {
-    const value = values.shift();
-    current.next = new ListNode(value);
+    current.next = new ListNode(values.pop());
     current = current.next;
   }
 
