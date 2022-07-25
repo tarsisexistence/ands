@@ -20,3 +20,30 @@ export const createList = values => {
 
   return head;
 };
+
+export const createCycledList = (values, cycleIndex) => {
+  if (values.length === 0) {
+    return null;
+  }
+
+  const head = new ListNode(null);
+  let current = head;
+  let cycleNode = null;
+
+  for (let i = 0; i < values.length; i += 1) {
+    const node = new ListNode(values[i]);
+
+    if (i === cycleIndex) {
+      cycleNode = node;
+    }
+
+    current.next = node;
+    current = current.next;
+  }
+
+  if (cycleNode) {
+    current.next = cycleNode;
+  }
+
+  return head.next;
+};
