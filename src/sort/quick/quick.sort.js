@@ -33,7 +33,7 @@ function partition(arr, l, r) {
   return p + 1;
 }
 
-export const basicQuickSort = array => {
+export const heavyQuicksort = array => {
   if (array.length < 2) {
     return array;
   }
@@ -43,10 +43,10 @@ export const basicQuickSort = array => {
   const right = array.filter(v => v > pivot);
   const equals = array.filter(v => v === pivot);
 
-  return [...basicQuickSort(left), ...equals, ...basicQuickSort(right)];
+  return [...heavyQuicksort(left), ...equals, ...heavyQuicksort(right)];
 };
 
-export const straightforwardQuickSort = arr => {
+export const simpleQuicksort = arr => {
   if (arr.length < 2) {
     return arr;
   }
@@ -67,40 +67,36 @@ export const straightforwardQuickSort = arr => {
     }
   }
 
-  return [...straightforwardQuickSort(left), ...equals, ...straightforwardQuickSort(right)];
+  return [...simpleQuicksort(left), ...equals, ...simpleQuicksort(right)];
 };
 
-// without random
-export function quickSortWithoutRandom(input) {
-  return dnq(input);
+export const quicksort = (arr, low = 0, high = arr.length - 1) => {
+  const els = high - low + 1;
 
-  function dnq(array) {
-    if (array.length < 2) {
-      return array;
-    }
-
-    if (array.length === 2) {
-      if (array[0] > array[1]) {
-        [array[0], array[1]] = [array[1], array[0]];
-      }
-
-      return array;
-    }
-
-    const supporting = array[array.length - 1];
-    const left = [];
-    const right = [];
-
-    for (let i = 1; i < array.length; i += 1) {
-      const num = array[i];
-
-      if (num < supporting) {
-        left.push(num);
-      } else {
-        right.push(num);
-      }
-    }
-
-    return [...dnq(left), supporting, ...dnq(right)];
+  if (els < 2) {
+    return arr;
   }
-}
+
+  let pivot = high;
+  let j = low;
+  for (let i = low; i < high; i += 1) {
+    if (arr[i] <= arr[pivot]) {
+      const temp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = temp;
+      j += 1;
+    }
+  }
+
+  if (arr[pivot] < arr[j]) {
+    const temp = arr[pivot];
+    arr[pivot] = arr[j];
+    arr[j] = temp;
+    pivot = j;
+  }
+
+  quicksort(arr, low, pivot - 1);
+  quicksort(arr, pivot + 1, high);
+
+  return arr;
+};
