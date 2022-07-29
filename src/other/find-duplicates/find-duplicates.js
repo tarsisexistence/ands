@@ -30,3 +30,42 @@ export function findDuplicates(arr1, arr2) {
 //
 //     return res;
 // }
+
+// export function findDuplicates(arr1, arr2) {
+//   const res = [];
+//
+//   if (arr1.length < arr2.length) {
+//     const temp = arr1;
+//     arr1 = arr2;
+//     arr2 = temp;
+//   }
+//
+//   for (const num of arr2) {
+//     const value = bs(arr1, num);
+//
+//     if (value !== -1) {
+//       res.push(num);
+//     }
+//   }
+//
+//   return res;
+//
+//   function binarySearch(arr, num) {
+//     let start = 0;
+//     let end = arr.length - 1;
+//
+//     while (start <= end) {
+//       const mid = Math.floor((start + end) / 2);
+//
+//       if (arr[mid] < num) {
+//         start = mid + 1;
+//       } else if (arr[mid] > num) {
+//         end = mid - 1;
+//       } else {
+//         return mid;
+//       }
+//     }
+//
+//     return -1;
+//   }
+// }
