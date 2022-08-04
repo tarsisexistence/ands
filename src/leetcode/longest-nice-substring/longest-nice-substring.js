@@ -12,16 +12,12 @@ export const longestNiceSubstring = s => {
     return '';
   }
 
-  const map = new Map();
-
-  for (const c of s) {
-    map.set(c, c);
-  }
+  const set = new Set(s.split(''));
 
   for (let i = 0; i < s.length; i += 1) {
     const c = s[i];
 
-    if (map.has(c.toUpperCase()) === map.has(c.toLowerCase())) {
+    if (set.has(c.toLowerCase()) === set.has(c.toUpperCase())) {
       continue;
     }
 
