@@ -7,7 +7,7 @@
  * @param {number} n
  * @return {boolean}
  */
-export const isPowerOfTwo = (n) => {
+export const isPowerOfTwo = n => {
   if (n < 1) {
     return false;
   }
