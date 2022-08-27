@@ -10,26 +10,23 @@
  */
 export const mostFrequent = (nums, key) => {
   const map = new Map();
-  let res = 0;
   let max = 0;
+  let most = 0;
 
   for (let i = 0; i < nums.length - 1; i += 1) {
-    if (nums[i] !== key) {
-      continue;
-    }
+    if (nums[i] === key) {
+      const target = nums[i + 1];
+      const count = (map.get(target) ?? 0) + 1;
+      map.set(target, count);
 
-    const target = nums[i + 1];
-    const nextTargetCount = (map.get(target) ?? 0) + 1;
-
-    map.set(target, nextTargetCount);
-
-    if (nextTargetCount > max) {
-      res = target;
-      max = nextTargetCount;
+      if (count > max) {
+        max = count;
+        most = target;
+      }
     }
   }
 
-  return res;
+  return most;
 };
 
 // export const mostFrequent = (nums, key) => {
