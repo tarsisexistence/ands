@@ -1,4 +1,4 @@
-import { shortestCompletingWord } from '../self-dividing-numbers/self-dividing-numbers';
+import { shortestCompletingWord } from './shortest-completing-word';
 
 describe('[Leetcode] shortestCompletingWord', () => {
   test('example #1', () => {
