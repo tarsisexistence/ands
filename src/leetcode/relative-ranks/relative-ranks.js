@@ -24,3 +24,21 @@ export const findRelativeRanks = score => {
 
   return score;
 };
+
+// const findRelativeRanks = function (score) {
+//   const ranks = new MaxPriorityQueue(); // imported in leetcode
+//
+//   for (let i = 0; i < score.length; i++)
+//     ranks.enqueue(i, score[i]);
+//
+//   for (let i = 0; i < score.length; i++) {
+//     const item = ranks.dequeue();
+//
+//     score[item.element] = i === 0
+//         ? 'Gold Medal' : i === 1
+//             ? 'Silver Medal' : i === 2
+//                 ? 'Bronze Medal' : String(i + 1);
+//   }
+//
+//   return score;
+// };
