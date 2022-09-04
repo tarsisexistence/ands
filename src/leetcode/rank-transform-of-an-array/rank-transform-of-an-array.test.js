@@ -1,45 +1,15 @@
-import { projectionArea } from './projection-area-of-3d-shapes';
+import { arrayRankTransform } from './rank-transform-of-an-array';
 
-describe('[Leetcode] projectionArea', () => {
+describe('[Leetcode] arrayRankTransform', () => {
   test('example #1', () => {
-    expect(projectionArea([[2]])).toBe(5);
+    expect(arrayRankTransform([40, 10, 20, 30])).toEqual([4, 1, 2, 3]);
   });
 
   test('example #2', () => {
-    expect(
-      projectionArea([
-        [1, 2],
-        [3, 4]
-      ])
-    ).toBe(17);
+    expect(arrayRankTransform([100, 100, 100])).toEqual([1, 1, 1]);
   });
 
   test('example #3', () => {
-    expect(
-      projectionArea([
-        [1, 0],
-        [0, 2]
-      ])
-    ).toBe(8);
-  });
-
-  test('example #4', () => {
-    expect(
-      projectionArea([
-        [1, 1, 1],
-        [1, 0, 1],
-        [1, 1, 1]
-      ])
-    ).toBe(14);
-  });
-
-  test('example #5', () => {
-    expect(
-      projectionArea([
-        [2, 2, 2],
-        [2, 1, 2],
-        [2, 2, 2]
-      ])
-    ).toBe(21);
+    expect(arrayRankTransform([37, 12, 28, 9, 100, 56, 80, 5, 12])).toEqual([5, 3, 4, 2, 8, 6, 7, 1, 3]);
   });
 });
