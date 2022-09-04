@@ -1,6 +1,7 @@
 {
   "name": "ands",
   "description": "algorithms and data structures",
+  "license": "MIT",
   "version": "0.1.0",
   "scripts": {
     "test": "jest",
@@ -16,16 +17,16 @@
   },
   "homepage": "https://github.com/tarsinzer/ands#readme",
   "devDependencies": {
-    "@babel/core": "7.18.10",
+    "@babel/core": "7.18.13",
     "@babel/eslint-parser": "7.18.9",
     "@babel/preset-env": "7.18.10",
     "babel-jest": "28.1.3",
-    "eslint": "8.21.0",
+    "eslint": "8.23.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.26.0",
-    "eslint-plugin-jest": "26.7.0",
+    "eslint-plugin-jest": "27.0.1",
     "eslint-plugin-prettier": "4.2.1",
-    "eslint-plugin-sonarjs": "0.14.0",
+    "eslint-plugin-sonarjs": "0.15.0",
     "husky": "4.3.8",
     "jest": "28.1.3",
     "jscpd": "3.4.5",

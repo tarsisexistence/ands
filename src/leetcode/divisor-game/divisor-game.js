@@ -4,7 +4,7 @@
  * https://leetcode.com/problems/divisor-game/
  */
 /**
- * @param {number} N
+ * @param {number} n
  * @return {boolean}
  */
-export const divisorGame = N => N % 2 === 0;
+export const divisorGame = n => n % 2 === 0;
