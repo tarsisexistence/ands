@@ -7,29 +7,36 @@
  * @param {TreeNode} root
  * @return {number}
  */
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
 export const getMinimumDifference = root => {
-  const stack = [root];
-  const values = [];
+  let res = Infinity;
+  const sorted = [];
+  sortBS(root);
 
-  while (stack.length > 0) {
-    const node = stack.pop();
+  for (let i = 0; i < sorted.length - 1; i += 1) {
+    res = Math.min(res, sorted[i + 1] - sorted[i]);
+  }
 
+  return res;
+
+  function sortBS(node) {
     if (!node) {
-      continue;
+      return;
     }
 
-    values.push(node.val);
-    stack.push(node.left);
-    stack.push(node.right);
+    sortBS(node.left);
+    sorted.push(node.val);
+    sortBS(node.right);
   }
-
-  values.sort((a, b) => a - b);
-
-  let min = Infinity;
-
-  for (let i = 0; i < values.length - 1; i += 1) {
-    min = Math.min(min, values[i + 1] - values[i]);
-  }
-
-  return min;
 };
