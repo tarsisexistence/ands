@@ -1,7 +1,7 @@
 /**
  * Leetcode #1496
  * Difficulty: Easy
- * https://leetcode.com/problems/path-crossing/description/
+ * https://leetcode.com/problems/path-crossing
  */
 /**
  * @param {string} path
