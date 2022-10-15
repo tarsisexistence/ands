@@ -10,17 +10,17 @@
 export const isValid = s => {
   const stack = [];
   const map = {
-    ')': '(',
-    ']': '[',
-    '}': '{'
+    '(': ')',
+    '[': ']',
+    '{': '}'
   };
 
   for (let i = 0; i < s.length; i += 1) {
     const c = s[i];
 
-    if (c === '(' || c === '[' || c === '{') {
+    if (map[c]) {
       stack.push(c);
-    } else if (stack.pop() !== map[c]) {
+    } else if (map[stack.pop()] !== c) {
       return false;
     }
   }
