@@ -1,42 +1,27 @@
 /**
- * Leetcode #530
+ * Leetcode #2335
  * Difficulty: Easy
- * https://leetcode.com/problems/minimum-absolute-difference-in-bst/
+ * https://leetcode.com/problems/minimum-amount-of-time-to-fill-cups
  */
 /**
- * @param {TreeNode} root
+ * @param {number[]} amount
  * @return {number}
  */
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {TreeNode} root
- * @return {number}
- */
-export const getMinimumDifference = root => {
-  let res = Infinity;
-  const sorted = [];
-  sortBS(root);
+export const fillCups = amount => {
+  let res = 0;
 
-  for (let i = 0; i < sorted.length - 1; i += 1) {
-    res = Math.min(res, sorted[i + 1] - sorted[i]);
+  while (!amount.every(x => x === 0)) {
+    amount.sort((a, b) => b - a);
+    let count = 0;
+    res += 1;
+
+    for (let i = 0; i < amount.length && count < 2; i += 1) {
+      if (amount[i] > 0) {
+        amount[i] -= 1;
+        count += 1;
+      }
+    }
   }
 
   return res;
-
-  function sortBS(node) {
-    if (!node) {
-      return;
-    }
-
-    sortBS(node.left);
-    sorted.push(node.val);
-    sortBS(node.right);
-  }
 };
