@@ -1,4 +1,4 @@
-import { fillCups } from '../minimum-absolute-difference-in-bst/minimum-absolute-difference-in-bst';
+import { fillCups } from './minimum-amount-of-time-to-fill-cups';
 
 describe('[Leetcode] fillCups', () => {
   test('example #1', () => {
