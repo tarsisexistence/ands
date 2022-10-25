@@ -8,7 +8,7 @@ describe('[Leetcode] leafSimilar', () => {
         createTree([3, 5, 1, 6, 2, 9, 8, null, null, 7, 4]),
         createTree([3, 5, 1, 6, 7, 4, 2, null, null, null, null, null, null, 9, 8])
       )
-    ).toBeTruthy();
+    ).toBe(true);
   });
 
   test('example #2', () => {
@@ -17,6 +17,6 @@ describe('[Leetcode] leafSimilar', () => {
         createTree([3, 5, 1, 6, 2, 9, 8, null, null, 7, 4]),
         createTree([3, 5, 1, 6, 7, 5, 2, null, null, null, null, null, null, 9, 8])
       )
-    ).toBeFalsy();
+    ).toBe(false);
   });
 });
