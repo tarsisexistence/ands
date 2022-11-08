@@ -23,6 +23,19 @@ export const makeGood = s => {
   return stack.join('');
 };
 
+// const makeGood = s => {
+//   const arr = s.split('');
+//
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr[i] && arr[i + 1] && arr[i] !== arr[i + 1] && arr[i].toLowerCase() === arr[i + 1].toLowerCase()) {
+//       arr.splice(i, 2);
+//       i -= 2;
+//     }
+//   }
+//
+//   return arr.join('');
+// };
+
 // export const makeGood = s => {
 //   const arr = s.split('');
 //
