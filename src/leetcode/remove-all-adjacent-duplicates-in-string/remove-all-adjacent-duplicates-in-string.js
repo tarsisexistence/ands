@@ -7,26 +7,26 @@
  * @param {string} S
  * @return {string}
  */
-export const removeDuplicates = S => {
+export const removeDuplicates = s => {
   const stack = [];
 
-  for (let i = 0; i < S.length; i += 1) {
-    if (stack[stack.length - 1] === S[i]) {
+  for (const c of s) {
+    if (c === stack.at(-1)) {
       stack.pop();
     } else {
-      stack.push(S[i]);
+      stack.push(c);
     }
   }
 
   return stack.join('');
 };
 
-// const removeDuplicates = S => {
-//     const arr = S.split('');
+// const removeDuplicates = s => {
+//     const arr = s.split('');
 
-//     for (let i = 1; i < arr.length; i += 1) {
-//         if (arr[i] === arr[i - 1]) {
-//             arr.splice(i - 1, 2);
+//     for (let i = 0; i < arr.length - 1; i += 1) {
+//         if (arr[i] === arr[i + 1]) {
+//             arr.splice(i, 2);
 //             i -= 2;
 //         }
 //     }

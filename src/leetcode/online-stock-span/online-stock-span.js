@@ -26,3 +26,15 @@ StockSpanner.prototype.next = function (price) {
 
   return count;
 };
+
+// StockSpanner.prototype.next = function (price) {
+//   let count = 1;
+//
+//   while (this.prices.length > 0 && this.prices.at(-1)[0] < price) {
+//     count += this.prices.pop()[1];
+//   }
+//
+//   this.prices.push([price, count]);
+//
+//   return count;
+// };
