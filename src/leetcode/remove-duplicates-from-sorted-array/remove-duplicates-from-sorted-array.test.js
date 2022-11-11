@@ -1,6 +1,6 @@
 import { removeDuplicates } from './remove-duplicates-from-sorted-array';
 
-describe('[Leetcode] removeDuplicates', () => {
+describe('[Leetcode] removeDuplicates (from sorted array)', () => {
   test('example #1', () => {
     const arr = [1, 1, 2];
     const output = removeDuplicates(arr);
