@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/tarsinzer/ands#readme",
   "devDependencies": {
-    "@babel/core": "7.19.1",
-    "@babel/eslint-parser": "7.19.1",
-    "@babel/preset-env": "7.19.1",
+    "@babel/core": "7.23.9",
+    "@babel/eslint-parser": "7.23.10",
+    "@babel/preset-env": "7.23.9",
     "babel-jest": "29.0.3",
     "eslint": "8.56.0",
     "eslint-config-prettier": "8.10.0",
