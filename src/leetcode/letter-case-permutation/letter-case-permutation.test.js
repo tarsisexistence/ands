@@ -2,12 +2,7 @@ import { letterCasePermutation } from './letter-case-permutation';
 
 describe('[Leetcode] letterCasePermutation', () => {
   test('example #1', () => {
-    expect(letterCasePermutation('a1b2')).toEqual([
-      'a1b2',
-      'A1b2',
-      'a1B2',
-      'A1B2'
-    ]);
+    expect(letterCasePermutation('a1b2')).toEqual(['a1b2', 'A1b2', 'a1B2', 'A1B2']);
   });
 
   test('example #2', () => {

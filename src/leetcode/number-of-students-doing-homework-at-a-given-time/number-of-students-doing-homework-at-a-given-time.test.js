@@ -18,12 +18,6 @@ describe('[Leetcode] busyStudent', () => {
   });
 
   test('example #5', () => {
-    expect(
-      busyStudent(
-        [9, 8, 7, 6, 5, 4, 3, 2, 1],
-        [10, 10, 10, 10, 10, 10, 10, 10, 10],
-        5
-      )
-    ).toBe(5);
+    expect(busyStudent([9, 8, 7, 6, 5, 4, 3, 2, 1], [10, 10, 10, 10, 10, 10, 10, 10, 10], 5)).toBe(5);
   });
 });

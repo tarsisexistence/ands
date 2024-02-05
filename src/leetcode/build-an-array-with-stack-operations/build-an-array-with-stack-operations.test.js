@@ -14,12 +14,6 @@ describe('[Leetcode] buildArray', () => {
   });
 
   test('example #4', () => {
-    expect(buildArray([2, 3, 4], 4)).toEqual([
-      'Push',
-      'Pop',
-      'Push',
-      'Push',
-      'Push'
-    ]);
+    expect(buildArray([2, 3, 4], 4)).toEqual(['Push', 'Pop', 'Push', 'Push', 'Push']);
   });
 });

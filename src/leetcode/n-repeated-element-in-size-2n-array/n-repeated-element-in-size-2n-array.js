@@ -15,7 +15,6 @@ export const repeatedNTimes = A => {
       return value;
     }
 
-
     cache.add(value);
   }
 

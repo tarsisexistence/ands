@@ -24,8 +24,7 @@ export const letterCasePermutation = S => {
     const { length } = words;
 
     for (let j = 0; j < length; j += 1) {
-      const word =
-        words[j].substring(0, i) + transformedChar + words[j].substring(i + 1);
+      const word = words[j].substring(0, i) + transformedChar + words[j].substring(i + 1);
       words.push(word);
     }
   }

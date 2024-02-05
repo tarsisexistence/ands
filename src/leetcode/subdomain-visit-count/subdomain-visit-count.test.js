@@ -10,14 +10,7 @@ describe('[Leetcode] subdomainVisits', () => {
   });
 
   test('example #2', () => {
-    expect(
-      subdomainVisits([
-        '900 google.mail.com',
-        '50 yahoo.com',
-        '1 intel.mail.com',
-        '5 wiki.org'
-      ])
-    ).toEqual([
+    expect(subdomainVisits(['900 google.mail.com', '50 yahoo.com', '1 intel.mail.com', '5 wiki.org'])).toEqual([
       '900 google.mail.com',
       '901 mail.com',
       '951 com',

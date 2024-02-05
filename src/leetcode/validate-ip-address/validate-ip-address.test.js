@@ -14,9 +14,7 @@ describe('[Leetcode] validIPAddress', () => {
   });
 
   test('example #4', () => {
-    expect(validIPAddress('2001:0db8:85a3:0000:0000:8a2e:0370:7334')).toBe(
-      'IPv6'
-    );
+    expect(validIPAddress('2001:0db8:85a3:0000:0000:8a2e:0370:7334')).toBe('IPv6');
   });
 
   test('example #5', () => {
@@ -28,15 +26,11 @@ describe('[Leetcode] validIPAddress', () => {
   });
 
   test('example #7', () => {
-    expect(validIPAddress('02001:0db8:85a3:0000:0000:8a2e:0370:7334')).toBe(
-      'Neither'
-    );
+    expect(validIPAddress('02001:0db8:85a3:0000:0000:8a2e:0370:7334')).toBe('Neither');
   });
 
   test('example #8', () => {
-    expect(validIPAddress('0201:0db8:85a3:0000:0000:8a2e:0370:7334')).toBe(
-      'IPv6'
-    );
+    expect(validIPAddress('0201:0db8:85a3:0000:0000:8a2e:0370:7334')).toBe('IPv6');
   });
 
   test('example #9', () => {

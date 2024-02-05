@@ -7,7 +7,7 @@
  * @param {string} s
  * @return {string}
  */
-export const frequencySort = (s) => {
+export const frequencySort = s => {
   const frequency = new Map();
 
   for (let i = 0; i < s.length; i += 1) {
@@ -26,6 +26,6 @@ export const frequencySort = (s) => {
         return bf - af;
       }
     })
-    .map((char) => char.repeat(frequency.get(char)))
+    .map(char => char.repeat(frequency.get(char)))
     .join('');
 };

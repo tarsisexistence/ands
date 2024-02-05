@@ -15,10 +15,7 @@ export const leafSimilar = (root1, root2) => {
   dfs(root1, leaves1);
   dfs(root2, leaves2);
 
-  return (
-    leaves1.length === leaves2.length &&
-    leaves1.every((value, index) => value === leaves2[index])
-  );
+  return leaves1.length === leaves2.length && leaves1.every((value, index) => value === leaves2[index]);
 
   function dfs(node, leaves) {
     const hasLeft = node.left !== null;

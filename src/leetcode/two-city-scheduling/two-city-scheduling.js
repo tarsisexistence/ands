@@ -7,7 +7,7 @@
  * @param {number[][]} costs
  * @return {number}
  */
-export const twoCitySchedCost = (costs) => {
+export const twoCitySchedCost = costs => {
   const N = costs.length / 2;
   let cost = 0;
 

@@ -23,13 +23,7 @@ export const numIslands = grid => {
   return islands;
 
   function search(i, j) {
-    if (
-      i < 0 ||
-      j < 0 ||
-      i >= grid.length ||
-      j >= grid[i].length ||
-      grid[i][j] === '0'
-    ) {
+    if (i < 0 || j < 0 || i >= grid.length || j >= grid[i].length || grid[i][j] === '0') {
       return;
     }
 

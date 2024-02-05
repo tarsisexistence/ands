@@ -13,9 +13,7 @@ export const maximalSquare = matrix => {
   for (let i = 0; i < matrix.length; i += 1) {
     for (let j = 0; j < matrix[0].length; j += 1) {
       if (i > 0 && j > 0 && matrix[i][j] !== '0') {
-        matrix[i][j] =
-          1 +
-          Math.min(matrix[i - 1][j], matrix[i][j - 1], matrix[i - 1][j - 1]);
+        matrix[i][j] = 1 + Math.min(matrix[i - 1][j], matrix[i][j - 1], matrix[i - 1][j - 1]);
       }
 
       maxCount = Math.max(maxCount, matrix[i][j]);

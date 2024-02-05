@@ -11,8 +11,6 @@
 export const kWeakestRows = (mat, k) =>
   mat
     .map((m, i) => ({ i, soldiers: m.reduce((acc, bin) => acc + bin, 0) }))
-    .sort((a, b) =>
-      a.soldiers !== b.soldiers ? a.soldiers - b.soldiers : a.i - b.i
-    )
+    .sort((a, b) => (a.soldiers !== b.soldiers ? a.soldiers - b.soldiers : a.i - b.i))
     .map(v => v.i)
     .slice(0, k);

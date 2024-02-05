@@ -8,9 +8,7 @@
  * @return {string[]}
  */
 export const stringMatching = words =>
-  words.filter(word =>
-    words.some(_word => word !== _word && _word.includes(word))
-  );
+  words.filter(word => words.some(_word => word !== _word && _word.includes(word)));
 
 // export const stringMatching = words => words.filter(word => {
 //   for (let j = 0; j < words.length; j += 1) {

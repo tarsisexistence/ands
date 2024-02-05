@@ -7,7 +7,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-export const maxProduct = (nums) => {
+export const maxProduct = nums => {
   let x = 0;
   let y = 0;
 

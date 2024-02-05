@@ -26,8 +26,5 @@ export const largestDivisibleSubset = nums => {
     }
   }
 
-  return subsets.reduce(
-    (largest, subset) => (largest.length >= subset.length ? largest : subset),
-    []
-  );
+  return subsets.reduce((largest, subset) => (largest.length >= subset.length ? largest : subset), []);
 };

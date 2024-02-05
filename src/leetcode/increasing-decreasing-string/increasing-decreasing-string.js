@@ -7,7 +7,7 @@
  * @param {string} s
  * @return {string}
  */
-export const sortString = (s) => {
+export const sortString = s => {
   const map = s.split('').reduce((acc, char) => {
     acc[char] = (acc[char] || 0) + 1;
     return acc;

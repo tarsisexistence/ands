@@ -16,5 +16,5 @@ export const uncommonFromSentences = (A, B) => {
     return acc;
   }, {});
 
-  return Object.keys(wordsMap).filter((word) => wordsMap[word] === 1);
+  return Object.keys(wordsMap).filter(word => wordsMap[word] === 1);
 };

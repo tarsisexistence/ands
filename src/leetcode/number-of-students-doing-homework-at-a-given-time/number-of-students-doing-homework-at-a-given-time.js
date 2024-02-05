@@ -10,5 +10,4 @@
  * @return {number}
  */
 export const busyStudent = (startTime, endTime, queryTime) =>
-  startTime.filter((start, i) => start <= queryTime && queryTime <= endTime[i])
-    .length;
+  startTime.filter((start, i) => start <= queryTime && queryTime <= endTime[i]).length;

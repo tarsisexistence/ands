@@ -25,16 +25,7 @@ describe('[Leetcode] FirstUnique', () => {
   test('example #2', () => {
     expect(
       queueChecker(
-        [
-          'FirstUnique',
-          'showFirstUnique',
-          'add',
-          'add',
-          'add',
-          'add',
-          'add',
-          'showFirstUnique'
-        ],
+        ['FirstUnique', 'showFirstUnique', 'add', 'add', 'add', 'add', 'add', 'showFirstUnique'],
         [[[7, 7, 7, 7, 7, 7]], [], [7], [3], [3], [7], [17], []]
       )
     ).toEqual([null, -1, null, null, null, null, null, 17]);
@@ -42,10 +33,7 @@ describe('[Leetcode] FirstUnique', () => {
 
   test('example #3', () => {
     expect(
-      queueChecker(
-        ['FirstUnique', 'showFirstUnique', 'add', 'showFirstUnique'],
-        [[[809]], [], [809], []]
-      )
+      queueChecker(['FirstUnique', 'showFirstUnique', 'add', 'showFirstUnique'], [[[809]], [], [809], []])
     ).toEqual([null, 809, null, -1]);
   });
 });

@@ -17,8 +17,7 @@ export const subdomainVisits = cpdomains => {
     while (domain.length > 0) {
       recordDomain(visits, domain);
       const domainSeparatorId = domain.indexOf('.');
-      domain =
-        domainSeparatorId === -1 ? '' : domain.slice(domainSeparatorId + 1);
+      domain = domainSeparatorId === -1 ? '' : domain.slice(domainSeparatorId + 1);
     }
   }
 
@@ -33,9 +32,6 @@ export const subdomainVisits = cpdomains => {
 
   function recordDomain(visits, domain) {
     visits = Number(visits);
-    visitsEntity[domain] =
-      visitsEntity[domain] === undefined
-        ? visits
-        : visitsEntity[domain] + visits;
+    visitsEntity[domain] = visitsEntity[domain] === undefined ? visits : visitsEntity[domain] + visits;
   }
 };

@@ -7,7 +7,7 @@
  * @param {number} num
  * @return {number}
  */
-export const numberOfSteps = (num) => {
+export const numberOfSteps = num => {
   let steps = 0;
   let n = num;
 

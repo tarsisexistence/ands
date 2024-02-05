@@ -48,18 +48,6 @@ describe('[Leetcode] findItinerary', () => {
         ['ANU', 'TIA'],
         ['JFK', 'TIA']
       ])
-    ).toEqual([
-      'JFK',
-      'ANU',
-      'EZE',
-      'AXA',
-      'TIA',
-      'ANU',
-      'JFK',
-      'TIA',
-      'ANU',
-      'TIA',
-      'JFK'
-    ]);
+    ).toEqual(['JFK', 'ANU', 'EZE', 'AXA', 'TIA', 'ANU', 'JFK', 'TIA', 'ANU', 'TIA', 'JFK']);
   });
 });

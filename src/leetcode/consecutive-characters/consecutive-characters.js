@@ -7,7 +7,7 @@
  * @param {string} s
  * @return {number}
  */
-export const maxPower = (s) => {
+export const maxPower = s => {
   let max = 0;
   let prev = '';
   let count = 0;

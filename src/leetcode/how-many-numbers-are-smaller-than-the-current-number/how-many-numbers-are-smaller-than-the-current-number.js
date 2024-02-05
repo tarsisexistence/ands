@@ -7,5 +7,4 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-export const smallerNumbersThanCurrent = (nums) =>
-  nums.map((num) => nums.filter((innerNum) => num > innerNum).length);
+export const smallerNumbersThanCurrent = nums => nums.map(num => nums.filter(innerNum => num > innerNum).length);

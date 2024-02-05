@@ -9,7 +9,4 @@
  * @return {boolean}
  */
 export const isUnivalTree = (root, val = root.val) =>
-  root === null ||
-  (val === root.val &&
-    isUnivalTree(root.left, root.val) &&
-    isUnivalTree(root.right, root.val));
+  root === null || (val === root.val && isUnivalTree(root.left, root.val) && isUnivalTree(root.right, root.val));

@@ -14,11 +14,7 @@ export const findOccurrences = (text, first, second) => {
   const thirds = [];
 
   for (let i = 0; i < words.length; i += 1) {
-    if (
-      words[i] === second &&
-      words[i - 1] === first &&
-      words[i + 1] !== undefined
-    ) {
+    if (words[i] === second && words[i - 1] === first && words[i + 1] !== undefined) {
       thirds.push(words[i + 1]);
     }
   }

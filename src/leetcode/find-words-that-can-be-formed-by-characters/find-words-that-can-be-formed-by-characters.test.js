@@ -6,9 +6,7 @@ describe('[Leetcode] countCharacters', () => {
   });
 
   test('example #2', () => {
-    expect(
-      countCharacters(['hello', 'world', 'leetcode'], 'welldonehoneyr')
-    ).toBe(10);
+    expect(countCharacters(['hello', 'world', 'leetcode'], 'welldonehoneyr')).toBe(10);
   });
 
   test('example #3', () => {

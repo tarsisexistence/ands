@@ -20,10 +20,7 @@ export const canBeEqual = (target, arr) => {
     arrMap.set(arrValue, (arrMap.get(arrValue) || 0) + 1);
   }
 
-  return (
-    targetMap.size === arrMap.size &&
-    [...targetMap.keys()].every(key => targetMap.get(key) === arrMap.get(key))
-  );
+  return targetMap.size === arrMap.size && [...targetMap.keys()].every(key => targetMap.get(key) === arrMap.get(key));
 };
 
 // const canBeEqual = (target, arr) => target.sort((a ,b)=> a - b).join("") === arr.sort((a, b) => a - b).join("");

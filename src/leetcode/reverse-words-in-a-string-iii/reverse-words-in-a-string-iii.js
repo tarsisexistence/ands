@@ -10,10 +10,5 @@
 export const reverseWords = s =>
   s
     .split(' ')
-    .map(str =>
-      str
-        .split('')
-        .reverse()
-        .join('')
-    )
+    .map(str => str.split('').reverse().join(''))
     .join(' ');

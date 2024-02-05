@@ -13,9 +13,7 @@ export const hIndex2 = citations => {
   function dnq(start, end) {
     if (start >= end) {
       const offset = citations.length - start - 1;
-      return citations[start] > offset && citations[start] !== 0
-        ? offset + 1
-        : offset;
+      return citations[start] > offset && citations[start] !== 0 ? offset + 1 : offset;
     }
 
     const middle = Math.floor((start + end) / 2);

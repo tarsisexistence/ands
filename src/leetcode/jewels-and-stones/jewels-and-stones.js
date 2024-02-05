@@ -10,9 +10,7 @@
  */
 export const numJewelsInStones = (stoneTypes, stonesInStock) => {
   let jewels = 0;
-  const stoneTypesMap = Object.fromEntries(
-    stoneTypes.split('').map(jewel => [jewel, true])
-  );
+  const stoneTypesMap = Object.fromEntries(stoneTypes.split('').map(jewel => [jewel, true]));
 
   for (let i = 0; i < stonesInStock.length; i += 1) {
     if (stoneTypesMap[stonesInStock[i]]) {

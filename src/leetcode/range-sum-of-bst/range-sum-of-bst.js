@@ -18,15 +18,15 @@
  * @return {number}
  */
 export const rangeSumBST = (node, L, R, sum = 0) => {
-    if (node === null) {
-        return 0;
-    }
+  if (node === null) {
+    return 0;
+  }
 
-    const rangeValue = node.val >= L && node.val <= R ? node.val : 0;
-    const left = rangeSumBST(node.left, L, R, sum);
-    const right = rangeSumBST(node.right, L, R, sum);
+  const rangeValue = node.val >= L && node.val <= R ? node.val : 0;
+  const left = rangeSumBST(node.left, L, R, sum);
+  const right = rangeSumBST(node.right, L, R, sum);
 
-    return sum + rangeValue + left + right;
+  return sum + rangeValue + left + right;
 };
 // const rangeSumBST = (node, L, R) => {
 //     const nodes = [node];

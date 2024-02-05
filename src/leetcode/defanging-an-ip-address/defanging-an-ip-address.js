@@ -8,15 +8,15 @@
  * @return {string}
  */
 export const defangIPAddress = address => {
-    let resultString = '';
+  let resultString = '';
 
-    for (let i = 0; i < address.length; i++) {
-        if (address[i] !== '.') {
-            resultString += address[i];
-        } else {
-            resultString += '[.]';
-        }
+  for (let i = 0; i < address.length; i++) {
+    if (address[i] !== '.') {
+      resultString += address[i];
+    } else {
+      resultString += '[.]';
     }
+  }
 
-    return resultString;
+  return resultString;
 };

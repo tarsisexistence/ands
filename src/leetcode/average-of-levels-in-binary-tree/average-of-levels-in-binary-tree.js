@@ -7,7 +7,7 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-export const averageOfLevels = (root) => {
+export const averageOfLevels = root => {
   const count = [];
   const sum = [];
 

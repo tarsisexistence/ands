@@ -7,5 +7,4 @@
  * @param {TreeNode} root
  * @return {number}
  */
-export const countNodes = root =>
-  root === null ? 0 : 1 + countNodes(root.left) + countNodes(root.right);
+export const countNodes = root => (root === null ? 0 : 1 + countNodes(root.left) + countNodes(root.right));

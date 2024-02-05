@@ -30,7 +30,8 @@ const morseMap = [
   '.--',
   '-..-',
   '-.--',
-  '--..'];
+  '--..'
+];
 /**
  * @param {string[]} words
  * @return {number}

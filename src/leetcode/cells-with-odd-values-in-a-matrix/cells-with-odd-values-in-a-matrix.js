@@ -28,10 +28,7 @@ export const oddCells = (n, m, indices) => {
     }
   }
 
-  return matrix.reduce(
-    (odds, row) => odds + row.filter(num => num % 2 === 1).length,
-    0
-  );
+  return matrix.reduce((odds, row) => odds + row.filter(num => num % 2 === 1).length, 0);
 };
 // more imperative solution
 // const oddCells = (n, m, indices) => {

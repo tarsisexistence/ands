@@ -14,11 +14,7 @@ export const findWords = words => {
 
   return words.filter(word => {
     const firstChar = word[0].toLowerCase();
-    const keyboardRow = firstRow.includes(firstChar)
-      ? firstRow
-      : secondRow.includes(firstChar)
-      ? secondRow
-      : thirdRow;
+    const keyboardRow = firstRow.includes(firstChar) ? firstRow : secondRow.includes(firstChar) ? secondRow : thirdRow;
 
     for (let i = 0; i < word.length; i += 1) {
       if (!keyboardRow.includes(word[i].toLowerCase())) {

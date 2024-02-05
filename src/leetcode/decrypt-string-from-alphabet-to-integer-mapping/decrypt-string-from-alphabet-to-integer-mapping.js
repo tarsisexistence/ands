@@ -14,7 +14,7 @@ export const freqAlphabets = s => {
     let code = s[i];
 
     if (s[i + 2] === '#') {
-      code += s[i+1];
+      code += s[i + 1];
       i += 2;
     }
 

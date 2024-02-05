@@ -6,16 +6,7 @@ describe('[Leetcode] shuffle', () => {
   });
 
   test('example #2', () => {
-    expect(shuffle([1, 2, 3, 4, 4, 3, 2, 1], 4)).toEqual([
-      1,
-      4,
-      2,
-      3,
-      3,
-      2,
-      4,
-      1
-    ]);
+    expect(shuffle([1, 2, 3, 4, 4, 3, 2, 1], 4)).toEqual([1, 4, 2, 3, 3, 2, 4, 1]);
   });
 
   test('example #3', () => {
