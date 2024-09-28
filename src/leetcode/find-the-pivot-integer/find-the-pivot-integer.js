@@ -16,7 +16,7 @@
  * @param {number} n
  * @return {number}
  */
-const pivotInteger = n => {
+export const pivotInteger = n => {
   let sum = 0;
   let temp = 0;
 

@@ -1,7 +1,7 @@
 /**
  * Leetcode #3289
  * Difficulty: Easy
- * https://leetcode.com/problems/the-two-sneaky-numbers-of-digitville/
+ * https://leetcode.com/problems/the-two-sneaky-numbers-of-digitville
  */
 /**
  * @param {number[]} nums

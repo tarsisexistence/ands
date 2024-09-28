@@ -2,7 +2,7 @@ import { convertDateToBinary } from './convert-date-to-binary';
 
 describe('[Leetcode] convertDateToBinary', () => {
   test('example #1', () => {
-    expect(convertDateToBinary('"2080-02-29"')).toBe('100000100000-10-11101');
+    expect(convertDateToBinary('2080-02-29')).toBe('100000100000-10-11101');
   });
 
   test('example #2', () => {
