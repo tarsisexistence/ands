@@ -1,7 +1,7 @@
 /**
  * Leetcode #2500
  * Difficulty: Easy
- * https://leetcode.com/problems/delete-greatest-value-in-each-row/description/
+ * https://leetcode.com/problems/delete-greatest-value-in-each-row
  */
 /**
  * @param {number[][]} grid

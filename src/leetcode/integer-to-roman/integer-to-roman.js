@@ -1,7 +1,7 @@
 /**
  * Leetcode #12
  * Difficulty: Medium
- * https://leetcode.com/problems/integer-to-roman/description/
+ * https://leetcode.com/problems/integer-to-roman
  */
 /**
  * @param {number} num

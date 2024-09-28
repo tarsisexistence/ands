@@ -1,7 +1,7 @@
 /**
  * Leetcode #82
  * Difficulty: Medium
- * https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/description/
+ * https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii
  */
 /**
  * @param {ListNode} head

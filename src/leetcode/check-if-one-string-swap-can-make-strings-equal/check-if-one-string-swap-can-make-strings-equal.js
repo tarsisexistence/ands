@@ -1,7 +1,7 @@
 /**
  * Leetcode #1790
  * Difficulty: Easy
- * https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/description/
+ * https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal
  */
 /**
  * @param {string} s1

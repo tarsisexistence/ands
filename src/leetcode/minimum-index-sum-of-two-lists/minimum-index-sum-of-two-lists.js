@@ -1,7 +1,7 @@
 /**
  * Leetcode #599
  * Difficulty: Easy
- * https://leetcode.com/problems/minimum-index-sum-of-two-lists/description/
+ * https://leetcode.com/problems/minimum-index-sum-of-two-lists
  */
 /**
  * @param {string[]} list1

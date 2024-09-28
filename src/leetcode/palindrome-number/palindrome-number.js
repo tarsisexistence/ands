@@ -1,7 +1,7 @@
 /**
  * Leetcode #9
  * Difficulty: Easy
- * https://leetcode.com/problems/palindrome-number/description/
+ * https://leetcode.com/problems/palindrome-number
  */
 /**
  * @param {number} x

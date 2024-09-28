@@ -1,7 +1,7 @@
 /**
  * Leetcode #692
  * Difficulty: Medium
- * https://leetcode.com/problems/top-k-frequent-words/description/
+ * https://leetcode.com/problems/top-k-frequent-words
  */
 /**
  * @param {string[]} words

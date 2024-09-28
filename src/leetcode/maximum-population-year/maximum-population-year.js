@@ -1,7 +1,7 @@
 /**
  * Leetcode #1854
  * Difficulty: Easy
- * https://leetcode.com/problems/maximum-population-year/description/
+ * https://leetcode.com/problems/maximum-population-year
  */
 /**
  * @param {number[][]} logs

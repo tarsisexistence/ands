@@ -1,7 +1,7 @@
 /**
  * Leetcode #724
  * Difficulty: Easy
- * https://leetcode.com/problems/find-pivot-index/description/
+ * https://leetcode.com/problems/find-pivot-index
  */
 /**
  * @param {number[]} nums

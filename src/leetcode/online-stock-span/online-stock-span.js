@@ -1,7 +1,7 @@
 /**
  * Leetcode #901
  * Difficulty: Medium
- * https://leetcode.com/problems/online-stock-span/description/
+ * https://leetcode.com/problems/online-stock-span
  */
 export const StockSpanner = function () {
   this.prices = [];

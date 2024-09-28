@@ -1,7 +1,7 @@
 /**
  * Leetcode #2455
  * Difficulty: Easy
- * https://leetcode.com/problems/average-value-of-even-numbers-that-are-divisible-by-three/description/
+ * https://leetcode.com/problems/average-value-of-even-numbers-that-are-divisible-by-three
  */
 /**
  * @param {number[]} nums
