@@ -9,7 +9,7 @@
     "eslint:recommended",
     "prettier",
     "plugin:prettier/recommended",
-    "plugin:sonarjs/recommended",
+    "plugin:sonarjs/recommended-legacy",
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:jest/recommended"
