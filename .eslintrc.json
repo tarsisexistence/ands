@@ -49,6 +49,7 @@
     "spaced-comment": 0,
     "no-empty-function": 2,
     "no-useless-constructor": 0,
+    "no-constant-condition": 0,
     "lines-between-class-members": 2
   },
   "settings": {
