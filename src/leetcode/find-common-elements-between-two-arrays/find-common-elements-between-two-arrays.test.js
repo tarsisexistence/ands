@@ -1,4 +1,4 @@
-import { findIntersectionValues } from './find-common-elements';
+import { findIntersectionValues } from './find-common-elements-between-two-arrays';
 
 describe('[Leetcode] findIntersectionValues', () => {
   test('example #1', () => {

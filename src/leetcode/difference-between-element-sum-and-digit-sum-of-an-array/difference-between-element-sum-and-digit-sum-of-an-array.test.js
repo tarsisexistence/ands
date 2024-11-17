@@ -1,4 +1,4 @@
-import { differenceOfSum } from './difference-between-sums';
+import { differenceOfSum } from './difference-between-element-sum-and-digit-sum-of-an-array';
 
 describe('[Leetcode] differenceOfSum', () => {
   test('example #1', () => {

@@ -8,7 +8,6 @@
  * @return {number}
  */
 export const minimumAverage = function (nums) {
-  nums.sort((a, b) => a - b);
   let averages = Infinity;
 
   for (let i = 0; i < nums.length / 2; i += 1) {
