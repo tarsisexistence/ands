@@ -29,7 +29,7 @@
     "eslint-plugin-jest": "27.9.0",
     "eslint-plugin-prettier": "5.2.1",
     "eslint-plugin-sonarjs": "2.0.4",
-    "husky": "9.1.6",
+    "husky": "9.1.7",
     "jest": "29.7.0",
     "jscpd": "4.0.5",
     "jscpd-badge-reporter": "1.1.3",
