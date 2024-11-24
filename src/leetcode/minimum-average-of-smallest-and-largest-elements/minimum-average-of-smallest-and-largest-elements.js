@@ -7,11 +7,13 @@
  * @param {number[]} nums
  * @return {number}
  */
-export const minimumAverageOfSmallestAndLargestElements = function (nums) {
+export var minimumAverage = function (nums) {
+  nums.sort((a, b) => a - b);
   let averages = Infinity;
 
   for (let i = 0; i < nums.length / 2; i += 1) {
     const value = (nums[i] + nums[nums.length - 1 - i]) / 2;
+
     averages = Math.min(averages, value);
   }
 

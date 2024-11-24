@@ -6,6 +6,6 @@ describe('[Leetcode] numberGame', () => {
   });
 
   test('example #2', () => {
-    expect(numberGame([2, 5])).toBe([5, 2]);
+    expect(numberGame([2, 5])).toEqual([5, 2]);
   });
 });
